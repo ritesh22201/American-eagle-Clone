@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metrophobic&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'poppins';
+        }
+
+        .modal-dialog {
+
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 421px;
+            height: auto;
+            padding-top: 5px;
+            padding: 20px;
+            background-image: url("/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg");
+            background-size: contain;
+            background-position: 0;
+            /* background: rgba(76, 175, 80, 0.3) */
+            /* opacity: 0.5; */
+            /* border: solid black; */
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        }
+
+        #welIa {
+            text-align: left;
+        }
+
+        .fa-solid {
+            margin-top: 7px;
+            border: none;
+            display: flex;
+            margin-left: 92%;
+        }
+
+        .fa-arrow-left {
+            margin: 0;
+        }
+
+        .icon__div {
+            padding: 3px;
+            display: flex;
+            /* border: solid black; */
+        }
+
+        #hr {
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        .otp {
+            border: solid black;
+            padding: 5px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #otp {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+        }
+
+        #verify {
+            width: 100%;
+            padding: 12px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="modal-dialog">
+
+    </section>
+</body>
+
+<script>
+    let parentBox = document.querySelector(".modal-dialog")
+    parentBox.innerHTML = `
+            
+    <div>
+        <div class="icon__div">   
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+        </div>
+        <h3>OPT VERIFICATION</h3>
+        <hr id="hr">
+        <br>
+        <p>Enter OTP sent on your registered Mobile Number.
+            <b>NUMBER</b>
+        </p>
+        <div class="otp">
+            <p>OTP has been sent to your system. Please enter below.<p>
+        </div>
+        <input type="number" placeholder="Enter the OTP" id="otp">
+        <div>
+            <p>Resend OTP</p>
+            <button id="verify">VERIFY</button>
+        </div>
+    </div>
+    `
+</script>
+
+</html>
