@@ -35,18 +35,14 @@ body{
     background-color: #EE806B;
 }
 
-.offerHead{
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 17px;
-    letter-spacing: 0.6px;
-    color: white;
-    font-weight: bolder;
+.a{
+    text-decoration: none;
 }
 
 .mySlides a{
-    text-decoration: none;
-    font-size: 12px;
+    /* font-weight: bolder; */
+    /* text-decoration: none; */
+    font-size: 13px;
     font-weight: 400;
     line-height: 17px;
     letter-spacing: 0.6px;
@@ -71,7 +67,9 @@ body{
     background-color: #EE806B;
 }
 
-/* The dots/bullets/indicators */
+/* ***************************************************** */
+
+/* dotSlide */
 
 .dot {
   height: 4px;
