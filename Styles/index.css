@@ -1,0 +1,167 @@
+/* ***************************************************** */
+
+/* font Adding */
+
+@font-face {
+    font-family: "AvenirNext-Regular";
+    src: url(/font/avenir_next_regular/AvenirNext-Regular.ttf);
+}
+
+/* ***************************************************** */
+
+/* Body */
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "AvenirNext-Regular",sans-serif;
+}
+
+/* ***************************************************** */
+
+/* topOfferSlide */
+
+.topOfferSlide{
+    display: flex;
+    margin: auto;
+    background-color: #EE806B;
+    padding-top: 20px;
+}
+
+.mySlides {
+    display: flex;
+    margin: auto;
+    /* border: 1px solid red; */
+    background-color: #EE806B;
+}
+
+.offerHead{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0.6px;
+    color: white;
+    font-weight: bolder;
+}
+
+.mySlides a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.6px;
+    color: white;
+    text-align: center;
+    gap: 50px;
+}
+
+.mySlides p{
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.6px;
+    color: white;
+}
+
+.dotSlide{
+    text-align:center;
+    padding-bottom: 10px;
+    height: 15px;
+    background-color: #EE806B;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+  height: 4px;
+  width: 4px;
+  margin: 0 1px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #F8CCC4;
+}
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* ***************************************************** */
+
+/* grayBar */
+
+.grayBar{
+    height: 50px;
+    background-color: #F6F6F6;
+    display: flex;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.grayBar :nth-child(1)
+{
+    /* margin: 10px 0px 0px 60px; */
+    /* padding: 13px 25px 15px 25px; */
+    color: #182C52;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 400px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: white;
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+
+.grayBar :nth-child(2)
+{
+    /* padding: 13px 0px 0px 20px; */
+    height: 18px;
+    /* border: 1px solid red; */
+}
+
+.grayBar :nth-child(3)
+{
+    /* padding: 0px 0px 0px 20px; */
+    height: 20px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+/* ***************************************************** */
+
+/* bigLogo */
+
+.bigLogo
+{
+    margin: 50px 0px 0px 600px;
+    height: 50px;
+    background-color:white;
+}
+
+.bigLogo a
+{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    color: #24272a;
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 400px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+
+/* ***************************************************** */
+
+
+
+/* ***************************************************** */
