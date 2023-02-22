@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metrophobic&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Metrophobic', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .modal-dialog {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 421px;
+            height: auto;
+            padding-top: 5px;
+            padding: 20px;
+            background-image: url("/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg");
+            background-size: contain;
+            background-position: 0;
+            margin-top: 50px;
+            /* background: rgba(76, 175, 80, 0.3) */
+            /* opacity: 0.5; */
+            /* border: solid black; */
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        }
+
+        #welIa {
+            text-align: left;
+            margin-top: 0px;
+
+        }
+
+        .fa-solid {
+            margin-top: 7px;
+            border: none;
+            display: flex;
+            margin-left: 95%;
+        }
+
+        #hr {
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        #mobile-number {
+            width: 100%;
+            padding: 12px;
+            font-size: large;
+            border-color: grey;
+            margin-top: 5px;
+        }
+
+        #submit {
+            width: 100%;
+            padding: 12px;
+            margin-top: 30px;
+            font-size: 12px;
+            background-color: black;
+            color: white;
+        }
+
+        #socLogin {
+            font-size: smaller;
+        }
+
+        #gLink {
+            margin-top: 5px;
+            border-style: outset;
+            width: 50%;
+            /* border: solid black; */
+            text-align: center;
+            font-size: x-large;
+            padding: 8px;
+        }
+
+        #bg_img {
+            position: absolute;
+            opacity: 15%;
+        }
+
+        #google {
+            font-size: large;
+        }
+
+        #logReg {
+            color: rgb(75, 70, 70);
+            margin-top: 25px;
+        }
+
+        #msg {
+            text-align: center;
+            color: white;
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="modal-dialog">
+
+    </section>
+
+</body>
+<script>
+    let parentBox = document.querySelector(".modal-dialog")
+    parentBox.innerHTML = `
+            
+            <div>
+    <i class="fa-sharp fa-solid fa-xmark"></i>
+    <hr id="hr">
+    <br>
+    <span>WELCOME TO</span><h1 id="welIa">INDIAN EAGLES</h1>
+    <p id="logReg">Login / Register with us to get latest updates and manage your orders</p>
+    <form>
+    <input type="number" placeholder="Enter mobile number" id="mobile-number"><br> 
+    <div id="msg-div"></div>
+    <input type="submit" value="NEXT" id="submit">
+    </form>
+    <br>
+    <div>
+    <lable id="socLogin">LOGIN WITH SOCIAL MEDIA</label>
+        <div id="gLink">
+            <i class="fa-brands fa-google"></i>
+            <span id="google">Google</span>
+        </div>
+    </div>
+    </div>
+    `
+    let alertmsg = document.getElementById("msg-div")
+    console.log(alertmsg)
+    let number = document.getElementById("mobile-number")
+    let UserNumber = JSON.parse(localStorage.getItem("mobileNumber")) || []
+    let formEl = document.querySelector("form")
+    formEl.addEventListener("submit", (e) => {
+        e.preventDefault()
+        let userLoginNumber = {
+            number: number.value,
+            name: null,
+            dob: null,
+            email: null,
+            gender: null
+        }
+        if (userLoginNumber.number.length < 10) {
+            alertmsg.innerHTML = `<h4 id="msg">Invalid Mobile Number *<h4>`
+            return
+        }
+        // return
+        for (let i = 0; i <= UserNumber.length; i++) {
+            if (UserNumber.length == 0) {
+                UserNumber.push(userLoginNumber)
+                console.log(UserNumber)
+                localStorage.setItem("mobileNumber", JSON.stringify(UserNumber))
+                window.location.href = "/ifNotMember.html"
+                return
+            } else if (userLoginNumber.number == UserNumber[i].number) {
+                window.location.href = "/alreadyMember.html"
+            } else {
+                window.location.href = "/ifNotMember.html"
+                return
+            }
+        }
+
+
+    })
+</script>
+
+</html>
