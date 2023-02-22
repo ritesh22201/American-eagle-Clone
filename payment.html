@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/82960e6fc3.js" crossorigin="anonymous"></script>
+    <title>Payment</title>
+</head>
+
+<body>
+    <header id="header">
+        <div id="navHeader" class="navHeader">
+            <div id="logo_Section" class="wid50 flex logo_Section">
+                <div class="wid50">
+                    <img src="./Media/logo/Pink Magenta White Modern Online Shop Logo.png" alt="" class="imglogo">
+                </div>
+                <div class=" wid50">
+
+                    <img src="./Media/images/aerie (1).svg" alt="" class="">
+                </div>
+            </div>
+            <div id="flagAndCart_Section" class="wid50 flex flagAndCart_Section">
+                <div>   
+                    <img src="./Media/images/flag__IN.png" alt="" class="imflag mar12">
+                </div>
+                <div>   
+                    <i class="fa-solid fa-bag-shopping mar12"></i>
+                </div>
+                
+                
+            </div>
+        </div>
+
+    </header>
+    <div id="main_Body" class="main_Body">
+        <main id="mainBody_wrapper">
+            <div id="checkoutHeader">
+                <h1>Checkout</h1>
+            </div>
+            <div id="shopping_DeatilsParent">
+
+                <div class="">
+                    <div class="shipInfoHead">
+                        <h3 id="">Shipping info</h3>
+                    </div>
+                    <h3 class="addressSaving">
+                        The address you enter will be saved. Manage your saved addresses in account settings.
+                    </h3>
+                    <!-- Shipping Address and Payment section-->
+                    <div class="mb25">
+                        <img src="" alt="">
+                        <span>
+                            <p>Shipping to India</p>
+                        </span>
+                    </div>
+                    <div class="wid100">
+                        <form action="" id="submitForm">
+                            <div id="shippingDetails">
+
+                                <div class="wid100 nameinpdiv mb25">
+                                    <div class="wid50">
+                                        <input type="text" id="firstName" class=" nameinputsfirst inputsstyle height36"
+                                            placeholder="First Name" required>
+                                    </div>
+                                    <div class=" wid50">
+                                        <input type="text" id="lastName" class="nameinputsSec inputsstyle height36"
+                                            placeholder="Last Name" required>
+                                    </div>
+
+                                </div>
+                                <div class="mb25 wid100">
+                                    <input type="text" id="address" class="inputs inputsstyle height36"
+                                        placeholder="Street Address" required>
+                                </div>
+                                <div class="mb25 wid100">
+                                    <input type="text" id="appartentNo" class="inputs inputsstyle height36"
+                                        placeholder="Apt #, Floor, etc. (Optional)" required>
+                                </div>
+
+                                <div class="flexrow mb25 nameinpdiv">
+                                    <div class="wid50">
+                                        <input type="text" id="City" class=" nameinputsfirst inputsstyle height36"
+                                            placeholder="City" required>
+                                    </div>
+                                    <div class="wid50">
+                                        <select name="" id="" class="seclect inputsstyle ">
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Karnataka">Karnataka</option>
+                                            <option value="Andhra">Andhra</option>
+                                            <option value="Maharashtra">Maharashtra</option>
+                                            <option value="Gujarat">Gujarat</option>
+                                            <option value="Pune">Pune</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>   
+                                    <input type="text" id="PostalCode" class=" mb25 zipcode height36 inputsstyle height36" placeholder="Zip Code2"
+                                    required>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                    <div class="flexrow">   
+                        <input type="checkbox" name="" id="">
+                        <span><p>Save this shipping Address</p></span>
+                    </div>
+                    
+                </div>
+                <!-- order summary section -->
+                <div id="orderSummarySection">
+                    <div id="bagItemsSection">   
+                        <div class="orderdetailshead">
+                            <div class="">
+                                <h5>Shopp ingBag</h5>
+                            </div>
+                            <span> itenm</span>
+                        </div>
+                        <div id="displayBagitems" class="">
+
+                            <div class="itemdisplay">   
+                                <div class="wid50">
+                                    <a href=""> 
+                                        <img src="./Media/logo/Pink Magenta White Modern Online Shop Logo.png" alt="" class="wid100">
+                                    </a>
+                                    
+                                </div>
+                                <div class="wi">   
+                                    <h3>Title</h3>
+                                    <h3>Price</h3>
+                                    <p>Style:12134-33</p>
+                                    <p>Color:Navy Blue</p>
+                                    <p>Size:23</p>
+                                    <p>Quantity:3</p>
+                                </div>
+                            </div>
+                                                        
+                            <div class="edit">   
+                                <span><a href="">Edit</a></span>
+                                <span>Remove</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+
+</html>
