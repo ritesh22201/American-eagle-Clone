@@ -53,10 +53,29 @@ form2.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let obj = {
-        image : form.image.value,
-        title : form.title.value,
-        description : form.desc.value,
-        price : form.price.value,
-        category : form.category.value
+        image : form2.image.value,
+        title : form2.title.value,
+        description : form2.desc.value,
+        price : form2.price.value,
+        category : form2.category.value
     }
+
+    let fetched = fetch('https://63f5e61459c944921f68bb09.mockapi.io/products', {
+        method : 'POST',
+        headers : {
+            'Content-Type' : 'application/json'
+        },
+        body : JSON.stringify(obj)
+    });
+
+    fetched.then(res => res.json())
+    .then(data => {
+        h2.style.display = 'grid';
+        form2.style.display = 'none';
+        h2.textContent = 'Product added to the database!!';
+        setTimeout(() => {
+            h2.style.display = 'none';
+            window.location.href = 'product.html'
+        }, 3000)
+    })
 })

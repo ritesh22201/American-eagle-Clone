@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Sono', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#nav1 {
+    background-color: #ee806b;
+    padding: 25px;
+}
+
+#nav1 span {
+    width: 40%;
+    margin: auto;
+    color: white;
+}
+
+#nav1 a {
+    font-size: 12px;
+    color: white;
+}
+
+#nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f6f6f6;
+}
+
+.logo {
+    width: 50px;
+}
+
+#nav2>div:nth-child(1) {
+    width: 12%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+    margin-left: 40px;
+}
+
+i:hover{
+    color: #ef8874;
+}
+
+#nav2>div:nth-child(2) {
+    width: 15%;
+    margin-right: 30px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#word-logo {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin: 20px 0 0 0;
+    letter-spacing: 3px;
+}
+
+#anchors{
+    display: flex;
+    width: 58%;
+    justify-content: space-between;
+    margin: auto;
+}
+
+#anchors > a{
+    text-decoration: none;
+    color: black;
+}
+#anchors > a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+#anchors > .anchor1{
+    color: #ef8874;
+}
+
+.headline{
+    margin: 20px 0;
+    padding: 1px 0;
+    border: none;
+    background-color: rgb(235, 233, 233);
+}
+
+.headline + h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#section1{
+    margin-bottom: 60px;
+}
+
+.carousel-item > div:nth-child(1){
+    background-image: url('https://s7d2.scene7.com/is/image/aeo/20230216-whp-promo-test-lg?scl=1&qlt=60&fmt=jpeg');
+    height: 550px;
+    display: grid;
+    place-items: center;
+}
+
+.active2 > div:nth-child(1){
+    background-image: url('https://s7d2.scene7.com/is/image/aeo/20230216-mhp-hero-lg?scl=1&qlt=60&fmt=jpeg');
+    height: 550px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.carousel-item > div:nth-child(1) > div{
+    text-align: center;
+    line-height: 55px;
+    color: #ee806b;
+}
+
+.carousel-item > div:nth-child(1) > div h1{
+    font-size: 60px;
+    font-weight: bolder;
+    color: #ee806b;
+    text-align: center;
+} 
+
+#sec-carousel > div > div{
+    width: 35%;
+    font-weight: bolder;
+    color: white;
+}
+
+#sec-carousel > div > div > h1{
+    color: white;
+}
+
+.carousel-item > div:nth-child(1) > div h1 + a{
+    text-decoration: none;
+    background-color: #ee806b;
+    padding: 12px 58px;
+    border-radius: 25px;
+    color: white;
+}
+
+.carousel-item > div:nth-child(1) > div h1 + a ~ *{
+    text-decoration: none;
+    color: #ee806b;
+    font-size: 12px;
+}
+
+#btn{
+    color: white;
+    border: none;
+    background-color: #ee806b;
+    padding: 0px 45px;
+    border-radius: 29px;
+}
+
+#section2{
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+#section2 > div{
+    width: 11.5%;
+    text-align: center;
+}
+
+#section2 > div img{
+    width: 100%;
+}
+
+#fixed{
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+    background-color: white;
+    width: 26%;
+}
+
+#fixed > *{
+    margin-left: 10px;
+}
+
+#container{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: -500px;
+    margin-left: 350px;
+    gap: 10px;
+}
