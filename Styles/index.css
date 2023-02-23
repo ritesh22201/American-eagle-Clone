@@ -35,24 +35,22 @@ body{
     background-color: #EE806B;
 }
 
-.offerHead{
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 17px;
-    letter-spacing: 0.6px;
-    color: white;
-    font-weight: bolder;
+.a{
+    text-decoration: none;
+    font-size: 11px;
 }
 
 .mySlides a{
-    text-decoration: none;
+    /* font-weight: bolder; */
+    /* text-decoration: none; */
     font-size: 12px;
     font-weight: 400;
     line-height: 17px;
     letter-spacing: 0.6px;
     color: white;
     text-align: center;
-    gap: 50px;
+    font-weight: bold;
+    padding-left: 7px;
 }
 
 .mySlides p{
@@ -71,7 +69,9 @@ body{
     background-color: #EE806B;
 }
 
-/* The dots/bullets/indicators */
+/* ***************************************************** */
+
+/* dotSlide */
 
 .dot {
   height: 4px;
@@ -101,14 +101,14 @@ body{
     height: 50px;
     background-color: #F6F6F6;
     display: flex;
-    margin: auto;
-    padding-top: 10px;
+    align-items: center;
+    /* padding-top: 10px; */
 }
 
 .grayBar :nth-child(1)
 {
-    /* margin: 10px 0px 0px 60px; */
-    /* padding: 13px 25px 15px 25px; */
+    padding: 12.5px 25px 12.5px 25px;
+    margin: 0px 0px 0px 65px;
     color: #182C52;
     font-size: 14px;
     line-height: 23px;
@@ -122,18 +122,17 @@ body{
 
 .grayBar :nth-child(2)
 {
-    /* padding: 13px 0px 0px 20px; */
-    height: 18px;
-    /* border: 1px solid red; */
+    margin: 0px 0px 0px 35px;
+    /* height: 18px; */
 }
 
 .grayBar :nth-child(3)
 {
-    /* padding: 0px 0px 0px 20px; */
-    height: 20px;
-    text-align: center;
-    /* border: 1px solid red; */
+    margin: 0px 0px 0px 35px;
+    height: 23px;
+    border: 1px solid red;
 }
+
 
 /* ***************************************************** */
 

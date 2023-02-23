@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64"><defs fill="#000000"><style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:url(#linear-gradient-2);}</style><linearGradient id="linear-gradient" x1="6.62" y1="23.67" x2="40.72" y2="23.67" gradientUnits="userSpaceOnUse" fill="#000000"><stop offset="0" stop-color="#000000" fill="#000000"/><stop offset="1" stop-color="#000000" fill="#000000"/></linearGradient><linearGradient id="linear-gradient-2" x1="3.33" y1="32" x2="60.83" y2="32" xlink:href="#linear-gradient" fill="#000000"/></defs><g id="SCANING"><path class="cls-1" d="M35.75,11.68C19.12-3.63-3.63,19.13,11.68,35.75a17,17,0,0,0,12,5C38.67,40.83,46.47,22.34,35.75,11.68ZM34.31,34.31a15.05,15.05,0,0,1-21.19,0C3.72,25,10.51,8.62,23.71,8.73,36.92,8.62,43.72,25,34.31,34.31Z" fill="#000000"/><path class="cls-2" d="M59.73,52.91l-13.5-13.5a3.24,3.24,0,0,0-4-.64l-2.45-2.45C54.86,15.82,28-8.2,9.29,9.29a20.39,20.39,0,0,0,27,30.44l2.46,2.45a3.28,3.28,0,0,0,.7,4L53,59.66a3.63,3.63,0,0,0,2.54,1.1A2.63,2.63,0,0,0,57.4,60l2.69-2.7A3.15,3.15,0,0,0,59.73,52.91Zm-49-16.19C-.87,25.19,7.56,5.22,23.71,5.33a18.32,18.32,0,0,1,13,5.38C53.26,28.68,28.67,53.26,10.71,36.72Zm27.43,1.42c.09-.1.17-.21.27-.31l2.31,2.32-.57.57-2.32-2.31C37.93,38.31,38,38.23,38.14,38.14ZM58.68,55.91,56,58.6c-.29.3-1,.22-1.59-.35L40.9,44.75c-.73-.8-.65-1.45-.06-1.89l2-2,.38-.38c.48-.36,1.09-.11,1.59.36l13.5,13.49C58.89,54.9,59,55.62,58.68,55.91Z" fill="#000000"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="18px" viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rounded" transform="translate(-545.000000, -421.000000)">
+            <g id="Action" transform="translate(100.000000, 100.000000)">
+                <g id="-Round-/-Action-/-search" transform="translate(442.000000, 318.000000)">
+                    <g>
+                        <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M15.5,14 L14.71,14 L14.43,13.73 C15.63,12.33 16.25,10.42 15.91,8.39 C15.44,5.61 13.12,3.39 10.32,3.05 C6.09,2.53 2.53,6.09 3.05,10.32 C3.39,13.12 5.61,15.44 8.39,15.91 C10.42,16.25 12.33,15.63 13.73,14.43 L14,14.71 L14,15.5 L18.25,19.75 C18.66,20.16 19.33,20.16 19.74,19.75 C20.15,19.34 20.15,18.67 19.74,18.26 L15.5,14 Z M9.5,14 C7.01,14 5,11.99 5,9.5 C5,7.01 7.01,5 9.5,5 C11.99,5 14,7.01 14,9.5 C14,11.99 11.99,14 9.5,14 Z" id="🔹Icon-Color" fill="#1D1D1D"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
