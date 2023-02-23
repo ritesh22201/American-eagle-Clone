@@ -22,11 +22,17 @@
     <section id="section2">
         <h1>Add Product</h1>
         <form id="addProduct">
-            <input type="text" placeholder="Image Url" id="image">
-            <input type="text" placeholder="Enter product's name" id="title">
-            <input type="text" placeholder="Description" id="desc">
-            <input type="number" placeholder="Price" id="price">
-            <input type="text" placeholder="Category" id="category">
+            <input type="text" placeholder="Image Url" required id="image">
+            <input type="text" placeholder="Enter product's name" required id="title">
+            <input type="text" placeholder="Description" required id="desc">
+            <input type="number" placeholder="Price" required id="price">
+            <select id="category">
+                <option value="">Category</option>
+                <option value="Shirt">Shirt</option>
+                <option value="Jeans">Jeans</option>
+                <option value="Brief">Brief</option>
+                <option value="Boxer">Boxer</option>
+            </select>
             <input type="submit">
         </form>
     </section>
