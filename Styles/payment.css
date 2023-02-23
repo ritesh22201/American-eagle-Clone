@@ -10,7 +10,7 @@
 html,body{
     width: 100%;
     height: 100%;
-    overflow-y: hidden;
+    
     
 }
 .wid100{
@@ -21,6 +21,9 @@ html,body{
 }
 .mb25{
     margin-bottom: 25px;
+}
+.mright{
+    margin-left: 5px;
 }
 .flex{
     display: flex;
@@ -66,7 +69,7 @@ html,body{
 }
 .main_Body{
     width: 100%;
-    height: calc(100% - 85px);
+    height:100%;
    
 }
 .checkoutHeader{
@@ -79,7 +82,7 @@ html,body{
     margin: auto;
     
     box-sizing: border-box;
-    border: 1px solid red;
+   
 
 }
 #checkoutHeader>h1{
@@ -150,6 +153,7 @@ html,body{
     border-bottom: 1px solid #d6d6d6;
     display: flex;
     flex-direction: column;   
+   
 }
 .itemdisplay{
    display: grid;
@@ -166,3 +170,103 @@ html,body{
     width: 100%;
    /* object-fit: contain;*/
 }
+.rewardsHead{
+    padding: 30px 0;
+    box-sizing: border-box;
+    font-size: 22px;
+}
+.rewarsdsBody{
+    width: 100%;
+   
+}
+.rewardspoints{
+    width: 100%;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px 4px 0 0
+}
+.pointsDeatilswrapper{
+    width: 80%;
+    margin: auto;
+    padding: 45px 20px;
+    box-sizing: border-box;
+}
+.pointsDeatils{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.colorblue{
+     color: #385adc;
+     font-size: 18px;
+}
+
+.pointsdeatilsfooterh{
+    width: 100%;
+    border: 1px solid #d6d6d6;
+
+}
+.pointsdetailsFooter{
+    
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 24px 0;
+    box-sizing: border-box;
+    color: #385adc;
+}
+.pointsdesc1{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #666;
+    font-size: .6875rem;
+}
+.promoBtn{
+    width: 100%;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    border-color: #ccc;
+    color: #24272a;
+    border-radius: 25px
+}
+.btndiv{
+    margin-top: 10px;
+}
+#orderSummaryWrapper>div p{
+    color: #666;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.orderSummaryHeaddiv{
+    font-size: 22px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d6d6d6;
+}
+#orderSummaryWrapper{
+    border-bottom: 1px solid #d6d6d6;
+}
+.ordertotal{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    color: #24272a;
+}
+.ordersummaryFootertext{
+    margin-top: 10px;
+    font-size: .6875rem;
+    color: #666;
+}
+.footercheckbox{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+
+}
+
