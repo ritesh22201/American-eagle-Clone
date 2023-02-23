@@ -30,7 +30,7 @@
             height: auto;
             padding-top: 5px;
             padding: 20px;
-            background-image: url("/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg");
+            background-image: url("/login/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg");
             background-size: contain;
             background-position: 0;
             /* background: rgba(76, 175, 80, 0.3) */
@@ -74,11 +74,18 @@
 
         #Name,
         #DOB,
-        #mail {
+        #mail,
+        #MNumber {
             width: 100%;
             padding: 12px;
             margin-top: 10px;
             font-size: 17px;
+        }
+
+        #numDiv {
+            /* border: solid black; */
+            display: flex;
+            justify-content: space-evenly;
         }
     </style>
 
@@ -104,18 +111,24 @@
         <br>
         <p>Enter OTP sent on your registered Mobile Number.
         </p>
+        <div id="numDiv">
         <b>NUMBER</b><a href="/index.html" >CHANGE</a>
+        </div>
         <form>
             <input type="text" placeholder="Name *" id="Name">
+            <span id="nameEL"></span>
             <br>
             <br>
             <lable>Date OF Birth<label>
             <input type="date" name="" id="DOB" placeholder="">
+            <span id="dateEl"></span>
             <br>
             <br>
             <input type="email" id="mail" placeholder="Email ID *">
+            <span id="emailEl"></span>
             <br>
             <br>
+            <input type="Number" id="MNumber" placeholder="Mobile Number">
             <span id="gen">GENDER<span><br>
             <input type="radio" id="html" name="gender" value="Male">
             <label for="Male">Male</label><br>
@@ -123,6 +136,7 @@
             <label for="css">CSS</label><br>
             <input type="radio" id="Other" name="gender" value="Other">
             <label for="Other">Other</label>
+            <span id="gen"></span>
             <p>By proceeding i agree to the <a href="#">Terms & Conditions</a></p>
 
             <input type="submit" value="SEND OTP" id="submit">
@@ -132,34 +146,84 @@
    
     </div>
     `
-
-    let userDetils = JSON.parse(localStorage.getItem("mobileNumber")) || []
-    console.log(userDetils)
+    let numberSHowing = document.querySelector("b")
     let formEl = document.querySelector("form")
     let nameInp = document.getElementById("Name")
     let DOB = document.getElementById("DOB")
     let email = document.getElementById("mail")
-    let radioButtons = document.querySelectorAll('input[name="gender"]')
+    let nameEl = document.getElementById("nameEL")
+    let dateEl = document.getElementById("dateEl")
+    let emialEl = document.getElementById("emailEl")
+    let genEl = document.getElementById("gen")
+    let numberInp = document.getElementById("MNumber")
+    let gender = document.querySelectorAll('input[name="gender"]')
+    let url = "https://63f6414b59c944921f708a51.mockapi.io/login"
+    let fetched;
 
+    async function fetching() {
+        try {
+            let req = await fetch(url)
+            let res = await req.json()
+            fetched = res
+            console.log(fetched)
+            numberSHowing.innerText = res[res.length - 1].Mobile
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    window.addEventListener("load", () => {
+        fetching()
+    })
 
-    formEl.addEventListener("submit", (e) => {
+    formEl.addEventListener("submit", async (e) => {
         e.preventDefault()
+        if (nameInp.value == "") {
+            nameEl.innerText = `Invalid Name`
+            return
+        }
+        else if (DOB.value == "") {
+            dateEl.innerText = `Enter Valid Date`
+            returns
+        }
+        else if (email.value == "") {
+            emialEl.innerText = `Enter valid email`
+            return
+        }
         let selectedVal;
-        for (let radiobtn of radioButtons) {
+        for (let radiobtn of gender) {
             if (radiobtn.checked) {
                 selectedVal = radiobtn.value
                 break;
             }
         }
-        for (let i = 0; i < userDetils.length; i++) {
-            userDetils[i].name = nameInp.value
-            userDetils[i].dob = DOB.value
-            userDetils[i].email = email.value
-            userDetils[i].gender = selectedVal
+        try {
+            let userDetails = {
+                Mobile: numberInp.value,
+                name: nameInp.value,
+                dob: DOB.value,
+                email: email.value,
+                gender: selectedVal,
+                otp: Math.floor(Math.random() * 100000)
+            }
+            let req = await fetch(url, {
+                method: "POST",
+                body: JSON.stringify(userDetails),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            let res = await req.json()
+            window.location.href = "alreadyMember.html"
+        } catch (error) {
+            console.log(error)
         }
-        // userDetils.push()
-        console.log(userDetils)
     })
+    // console.log()
 </script>
+<!-- for (let i = 0; i < res.length; i++) { if (!res[i][name] && !res[i].dob && !res[i].email && !res[i].gender) {
+    res[i].name=userDetails.name res[i].dob=userDetails.dob res[i].email=userDetails.email
+    res[i].gender=userDetails.gender res[i].otp=Math.floor(Math.random() * 10000) } } console.log(res) -->
+
+
 
 </html>
