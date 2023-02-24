@@ -62,16 +62,16 @@ body{
     color: white;
 }
 
+/* ***************************************************** */
+
+/* dotSlide */
+
 .dotSlide{
     text-align:center;
     padding-bottom: 10px;
     height: 15px;
     background-color: #EE806B;
 }
-
-/* ***************************************************** */
-
-/* dotSlide */
 
 .dot {
   height: 4px;
@@ -108,7 +108,7 @@ body{
 .grayBar :nth-child(1)
 {
     padding: 12.5px 25px 12.5px 25px;
-    margin: 0px 0px 0px 65px;
+    margin: 0px 0px 0px 60px;
     color: #182C52;
     font-size: 14px;
     line-height: 23px;
@@ -122,15 +122,15 @@ body{
 
 .grayBar :nth-child(2)
 {
-    margin: 0px 0px 0px 35px;
-    /* height: 18px; */
+    margin: 0px 825px 0px 28px;
+    height: 18px;
 }
 
-.grayBar :nth-child(3)
+.fouricon
 {
-    margin: 0px 0px 0px 35px;
+    margin: 0px 0px 0px 30px;
     height: 23px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 
