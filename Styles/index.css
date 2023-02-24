@@ -361,7 +361,7 @@ hr {
     margin: 0px 0px 15px 0px;
 }
 
-.offBut button{
+.offBut a button{
     padding: 15px 45px 15px 45px;
     margin: 0px 10px 0px 0px;
     border-radius: 25px;
@@ -427,7 +427,7 @@ hr {
     left:135px;
 }
 
-.No1Img button{
+.No1Img a button{
     padding: 15px 65px 15px 65px;
     border-radius: 25px;
     border: none;
@@ -523,7 +523,7 @@ hr {
     left:470px;
 }
 
-.No2Img button{
+.No2Img a button{
     padding: 15px 60px 15px 60px;
     border-radius: 25px;
     border: none;
