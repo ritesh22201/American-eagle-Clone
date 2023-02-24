@@ -57,6 +57,7 @@ function filterItems(data) {
     })
 }
 
+
 function sortItems(data) {
     sort.addEventListener('change', (e) => {
         let val = e.target.value;
