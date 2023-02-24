@@ -197,7 +197,7 @@ hr {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: #ab5353;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -372,7 +372,7 @@ hr {
     margin: auto;
     text-align: center;
     align-items: center;
-   
+
 }
 
 .shop-1>div {
@@ -385,7 +385,8 @@ hr {
 
     display: flex;
 }
-.shop-1>h3{
+
+.shop-1>h3 {
     padding-top: 200px;
 }
 
@@ -403,4 +404,36 @@ hr {
     text-decoration: none;
     font-size: 14px;
     color: black;
+}
+
+.imgbox {
+    margin-right: 30px;
+    width: 50%;
+}
+
+.main222 {
+    font-size: 15px;
+    margin: 30px;
+
+    display: flex;
+    width: 80%;
+
+
+
+}
+
+.main222 img {
+
+    width: 100%;
+}
+
+.main222 h3,
+p,
+button,
+span {
+    margin: 10px;
+}
+
+.main222 button {
+    display: block;
 }
