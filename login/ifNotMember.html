@@ -30,7 +30,7 @@
             height: auto;
             padding-top: 5px;
             padding: 20px;
-            background-image: url("/login/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg");
+            background-image: url("/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg");
             background-size: contain;
             background-position: 0;
             /* background: rgba(76, 175, 80, 0.3) */
@@ -133,7 +133,7 @@
             <input type="radio" id="html" name="gender" value="Male">
             <label for="Male">Male</label><br>
             <input type="radio" id="Female" name="gender" value="Female">
-            <label for="css">CSS</label><br>
+            <label for="Female">Female</label><br>
             <input type="radio" id="Other" name="gender" value="Other">
             <label for="Other">Other</label>
             <span id="gen"></span>
@@ -213,7 +213,7 @@
                 }
             })
             let res = await req.json()
-            window.location.href = "alreadyMember.html"
+            window.location.href = "/alreadyMember.html"
         } catch (error) {
             console.log(error)
         }
