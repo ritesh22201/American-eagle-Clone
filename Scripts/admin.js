@@ -53,7 +53,7 @@ form2.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let obj = {
-        image : form2.image.value,
+        avatar : form2.image.value,
         title : form2.title.value,
         description : form2.desc.value,
         price : form2.price.value,
