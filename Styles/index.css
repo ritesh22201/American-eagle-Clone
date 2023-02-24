@@ -11,7 +11,7 @@
 
 /* Body */
 
-body{
+*{
     margin: 0px;
     padding: 0px;
     font-family: "AvenirNext-Regular",sans-serif;
@@ -31,8 +31,8 @@ body{
 .mySlides {
     display: flex;
     margin: auto;
-    /* border: 1px solid red; */
     background-color: #EE806B;
+    float: left;
 }
 
 .a{
@@ -140,8 +140,10 @@ body{
 
 .bigLogo
 {
-    margin: 50px 0px 0px 600px;
-    height: 50px;
+    margin: 35px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color:white;
 }
 
@@ -151,16 +153,72 @@ body{
     margin: auto;
     text-align: center;
     color: #24272a;
-    font-size: 21px;
+    font-size: 20px;
     line-height: 23px;
     font-weight: 400px;
     font-weight: bold;
     letter-spacing: 4px;
     text-decoration: none;
+    border: 1px solid red;
 }
 
 /* ***************************************************** */
 
+/* category */
 
+.category{
+    margin: 0px;
+    padding: 0px;
+    height: 70px;
+    border: 1px solid red;
+
+}
+
+/* ***************************************************** */
+
+/* offerAndBut */
+
+.offerAndBut{
+    height: 345px;
+    background-color: #C2DAD2;
+    border: 1px solid red;
+}
+
+.offerAndBut h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EE806B;
+    /* font-size: 25px; */
+    font-weight: 400;
+    /* line-height: 36px; */
+    font-weight: bolder;
+    margin: 100px 0px 15px 0px;
+}
+
+.offBut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 15px 0px;
+}
+
+.offBut button{
+    padding: 15px 45px 15px 45px;
+    margin: 0px 10px 0px 0px;
+    border-radius: 25px;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    color: #EE806B;
+}
+
+.offerAndBut a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #EE806B;
+}
 
 /* ***************************************************** */
