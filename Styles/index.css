@@ -26,6 +26,8 @@
     margin: auto;
     background-color: #EE806B;
     padding-top: 20px;
+    position: sticky;
+    z-index: 1;
 }
 
 .mySlides {
@@ -219,6 +221,20 @@
     align-items: center;
     font-size: 10px;
     color: #EE806B;
+}
+
+/* ***************************************************** */
+
+/* No1Img */
+
+.No1Img {
+    /* background-image: url(/Media/homePage/01.jpg); */
+    margin-top: 30px;
+    border: 1px solid red;
+}
+
+.No1Img img{
+    width: 100%;
 }
 
 /* ***************************************************** */
