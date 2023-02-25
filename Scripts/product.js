@@ -2,7 +2,11 @@ let cont = document.getElementById('container');
 let searchInp = document.getElementById('search');
 let filter = document.getElementById('filter');
 let sort = document.getElementById('sort');
+let bag = document.querySelector('.fa-bag-shopping');
+let cartData = document.getElementById('cartdata');
 let storeData = JSON.parse(localStorage.getItem('key')) || [];
+
+cartData.textContent = storeData.length;
 
 async function getdata() {
     let fetched_data = await fetch('https://63f5e61459c944921f68bb09.mockapi.io/products');
@@ -27,14 +31,51 @@ function displayData(data) {
         title.textContent = el.title;
         let price = document.createElement('p');
         price.textContent = `$ ${el.price}`;
-        card.append(avatar, title, price, btn);
+        let addProduct = document.createElement('span');
+        addProduct.style.marginLeft = '8px';
+        addProduct.style.fontSize = '14px'
+        addProduct.style.color = '#28d107';
+        addProduct.style.fontWeight = 'bold';
+
+        let filter = storeData.filter(ele => ele.title == el.title);
+        btn.textContent = filter.length ? "Go to Bag" : "Add to Bag";
+
+        if(storeData.length){
+            cartData.style.display = 'grid';
+        }
+
+        card.append(avatar, title, price, btn, addProduct);
         cont.append(card);
 
         btn.addEventListener('click', () => {
-            
+            if (btn.textContent == 'Add to Bag') {
+                storeData.push({ ...el, quantity: 1 });
+                cartData.textContent = storeData.length;
+                localStorage.setItem('key', JSON.stringify(storeData));
+                btn.textContent = 'Go to Bag';
+                if(storeData.length){
+                    cartData.style.display = 'grid';
+                }
+                addProduct.style.display = 'inline';
+                addProduct.textContent = 'Product added to bag✅';
+                // addProduct.style.transition = '0.5s ease-in-out'
+                setTimeout(() => {
+                    addProduct.style.display = 'none';
+                }, 4000)
+            }
+            else{
+                window.location.href = './cart.html';
+            }
         })
+
     })
 }
+
+// Go to cart
+
+bag.addEventListener('click', () => {
+    window.location.href = 'cart.html';
+})
 
 function searchItems(data) {
     searchInp.addEventListener('input', (e) => {
