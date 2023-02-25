@@ -624,6 +624,115 @@ hr {
     font-weight: 400;
     line-height: 20px;
     font-weight: bold;
+    margin-bottom: 45px;
 }
+
+/* ***************************************************** */
+
+/* SlideImage */
+
+.product {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-container {
+    padding-left: 35px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .product-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .product-card {
+    flex: 0 0 auto;
+    width: 390px;
+    height: 500px;
+    margin-right: 20px;
+    /* border: 1px solid red; */
+  }
+  
+  .product-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .product-card:hover .card-btn {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  
+  .product-image:hover {
+    background: transparent ;
+    color: #fff;
+  }
+  
+  .pre-btn,
+  .nxt-btn {
+    border: none;
+    width: 25px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+  }
+  
+  .pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+  }
+  
+  .nxt-btn {
+    right: 0;
+  }
+  
+  .pre-btn img,
+  .nxt-btn img {
+    opacity: 0.2;
+  }
+  
+  .pre-btn:hover img,
+  .nxt-btn:hover img {
+    opacity: 1;
+  }
+  
+  /* ************************************************ */
+
+
+
 
 /* ***************************************************** */

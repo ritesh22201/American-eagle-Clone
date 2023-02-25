@@ -1,3 +1,7 @@
+// ******************************************************
+
+// OfferSlider
+
 let slideIndex = 0;
 topOfferSlide();
 
@@ -17,3 +21,26 @@ function topOfferSlide() {
   dots[slideIndex-1].className += " active";
   setTimeout(topOfferSlide, 2000); // Change image every 2 seconds
 }
+
+// ******************************************************
+
+// SlideImage
+
+const productContainers = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width/2;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
+
+// ******************************************************
