@@ -125,7 +125,7 @@
 .grayBar :nth-child(2) img
 {
     margin: 0px 755px 0px 28px;
-    height: 25px;
+    height: 20px;
     background-color: transparent ;
     align-items: center;
 }
@@ -201,6 +201,10 @@
     /* height: 70px; */
     border: none;
 
+}
+
+.megamenuitems ul a{
+ text-decoration: none;
 }
 
 .drop {
@@ -607,7 +611,7 @@ hr {
     background-color: #EE806B;
     position: absolute;
     bottom:-3170px ;
-    left:685px;
+    left:684px;
 }
 
 /* ***************************************************** */
@@ -624,6 +628,248 @@ hr {
     font-weight: 400;
     line-height: 20px;
     font-weight: bold;
+    margin-bottom: 45px;
+}
+
+/* ***************************************************** */
+
+/* SlideImage */
+
+.product {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-container {
+    padding-left: 35px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .product-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .product-card {
+    flex: 0 0 auto;
+    width: 390px;
+    height: 500px;
+    margin-right: 20px;
+    /* border: 1px solid red; */
+  }
+  
+  .product-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .product-card:hover .card-btn {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  
+  .product-image:hover {
+    background: transparent ;
+    color: #fff;
+  }
+  
+  .pre-btn,
+  .nxt-btn {
+    border: none;
+    width: 25px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+  }
+  
+  .pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+  }
+  
+  .nxt-btn {
+    right: 0;
+  }
+  
+  .pre-btn img,
+  .nxt-btn img {
+    opacity: 0.2;
+  }
+  
+  .pre-btn:hover img,
+  .nxt-btn:hover img {
+    opacity: 1;
+  }
+  
+  /* ************************************************ */
+
+  /* socialMediacall */
+
+.socialMediacall {
+    margin-top: 30px;
+}
+
+.socialMediacall p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.mBold{
+    font-weight: bold;
+}
+
+/* ***************************************************** */
+
+/* twobut */
+
+.twobut{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.twobut button{
+    padding: 18px 40px 18px 40px;
+    border-radius: 30px;
+    border: 2px solid rgb(218, 217, 215);
+    background-color: white;
+    color: black;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+/* ***************************************************** */
+
+/* footer */
+
+#footerp1{
+    width: 90%;
+    display: flex;
+    margin:40px auto;
+    justify-content: space-between;
+}
+
+#footerp1 > div{
+    width: 48%;
+    border: 1px solid rgb(210, 209, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0; 
+}
+
+#footerp1 > div p{
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+#footerp1 > div a{
+    margin-left: 4px;
+    color: black;
+}
+
+#midfooter{
+    width: 90%;
+    display: flex;
+    margin:0 auto 30px auto;
+    gap: 20px;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+#midfooter > div{
+    width: 30%;
+}
+
+#midfooter > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+}
+
+#midfooter > div:nth-child(2) p{
+    margin: 0;
+}
+
+#midfooter > div:nth-child(2) p:hover, #midfooter > div:nth-child(3) p:hover{
+    text-decoration: underline;
+}
+
+#midfooter > div:nth-child(3) img{
+    width: 20px;
+}
+
+#midfooter span{
+    font-weight: bold;
+}
+
+#icons{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 28px;
+}
+
+#lowerFooter{
+    width: 90%;
+    margin: auto;
+    font-size: 13px;
+    line-height: 35px;
+}
+
+#lowerFooter a{
+    text-decoration: none;
+    color: black;
+}
+
+#lowerFooter a:hover{
+    text-decoration: underline;
+}
+
+#lowerFooter > div:nth-child(1){
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* ***************************************************** */
