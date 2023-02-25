@@ -732,7 +732,52 @@ hr {
   
   /* ************************************************ */
 
+  /* socialMediacall */
 
+.socialMediacall {
+    margin-top: 30px;
+}
 
+.socialMediacall p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.mBold{
+    font-weight: bold;
+}
+
+/* ***************************************************** */
+
+/* twobut */
+
+.twobut{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.twobut button{
+    padding: 18px 40px 18px 40px;
+    border-radius: 30px;
+    border: 2px solid rgb(218, 217, 215);
+    background-color: white;
+    color: black;
+    margin-right: 15px;
+    margin-bottom: 130px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+/* ***************************************************** */
+
+.bLine{
+    height: 1px;
+    background-color: gray;
+}
 
 /* ***************************************************** */
