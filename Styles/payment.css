@@ -18,9 +18,13 @@ html,body{
 .wid25{
     width: 10%;
 }
+.wid20{
+    width: 20%;
+}
 .wid100{
     width: 100%;
 }
+
 .wid50{
     width: 50%;
 }
@@ -35,6 +39,9 @@ html,body{
 }
 .mright{
     margin-left: 5px;
+}
+.mrft20{
+    margin-left: 20px;
 }
 .mrtop{
     margin-top: 12px;
@@ -126,6 +133,11 @@ html,body{
     border-bottom: 1px solid #d6d6d6;
     
 }
+.addresstext{
+    font-size: .6875rem;
+    line-height: 16px;
+    color: #24272a;
+}
 .addressSaving{
     font-size: 12px;
     font-weight: bold;
@@ -183,8 +195,12 @@ html,body{
 }
 .itemdisplay{
    display: grid;
-   grid-template-columns: 16em auto;
+   /* grid-template-columns: repeat(1fr,1fr,1fr); */
+   grid-template-columns: 1fr 2fr;
    gap: 20px;
+   /*display: flex;
+   flex-direction: row;*/
+
    padding: 30px 0;
    box-sizing: border-box;
 }
@@ -254,6 +270,16 @@ html,body{
     padding-bottom: 15px;
     border-color: #ccc;
     color: #24272a;
+    border-radius: 25px
+}
+.applyOfferbtn{
+    
+    height: 50px;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    background-color: #24272a;
+    color: white;
     border-radius: 25px
 }
 .btndiv{
@@ -329,8 +355,15 @@ html,body{
     padding-left: 15px;
     box-sizing: border-box;
 }
+.bordernone{
+    background: none;
+    border: none;
+}
 .fontsmall{
     font-size: 12px;
+}
+.font20px{
+    font-size: 20px;
 }
 .redeemGiftwrapper{
     margin-top: 19px;
