@@ -125,7 +125,7 @@
 .grayBar :nth-child(2) img
 {
     margin: 0px 755px 0px 28px;
-    height: 25px;
+    height: 20px;
     background-color: transparent ;
     align-items: center;
 }
@@ -598,7 +598,7 @@ hr {
     background-color: #EE806B;
     position: absolute;
     bottom:-3170px ;
-    left:483px;
+    left:473px;
 }
 
 .No3Imgb2{
@@ -611,7 +611,7 @@ hr {
     background-color: #EE806B;
     position: absolute;
     bottom:-3170px ;
-    left:689px;
+    left:684px;
 }
 
 /* ***************************************************** */
