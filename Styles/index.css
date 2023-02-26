@@ -92,13 +92,31 @@
 
 /* On smaller screens, decrease text size */
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
   .text {font-size: 11px}
 }
 
 /* ***************************************************** */
 
 /* grayBar */
+
+@media screen and (max-width: 600px) {
+    .grayBar :nth-child(2) img
+{
+    margin: 0px 790px 0px 28px;
+    height: 20px;
+    background-color: transparent ;
+    align-items: center;
+}
+
+    
+  }
+
+
+  #logon{
+    width: 45px;
+    margin-left: 60px;
+  }
 
 .grayBar{
     height: 50px;
