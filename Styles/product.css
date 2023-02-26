@@ -232,6 +232,11 @@ i{
     margin-bottom: 20px;
 }
 
+#filter, #sort{
+    background-color: rgb(218, 236, 251);
+    border-radius: 8px;
+}
+
 #fixed a{
     text-decoration: none;
     color: black;
