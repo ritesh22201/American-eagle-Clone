@@ -138,6 +138,12 @@ function appendata(data) {
         ele = ele.quantity--;
         localStorage.setItem("key", JSON.stringify(LSdata));
         appendata(LSdata);
+      }else if(ele.quantity=1){
+        LSdata = LSdata.filter((elem) => {
+          return elem.id !== ele.id
+        })
+        localStorage.setItem("key", JSON.stringify(LSdata))
+        appendata(LSdata)
       }
 
     });
