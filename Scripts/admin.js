@@ -3,6 +3,7 @@ let form = document.getElementById('login');
 let h2 = document.getElementById('status');
 let sec2 = document.getElementById('section2');
 let form2 = document.getElementById('addProduct');
+let productTable = document.getElementById('table');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -32,6 +33,7 @@ form.addEventListener('submit', (e) => {
                             h2.style.display = 'none';
                             sec2.style.display = 'block';
                         }, 3000);
+
                     }
                     else {
                         h2.style.display = 'grid';
@@ -71,7 +73,7 @@ form2.addEventListener('submit', (e) => {
     fetched.then(res => res.json())
     .then(data => {
         h2.style.display = 'grid';
-        form2.style.display = 'none';
+        sec2.style.display = 'none';
         h2.textContent = 'Product added to the database!!';
         setTimeout(() => {
             h2.style.display = 'none';

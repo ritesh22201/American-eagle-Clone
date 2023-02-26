@@ -4,9 +4,14 @@ let filter = document.getElementById('filter');
 let sort = document.getElementById('sort');
 let bag = document.querySelector('.fa-bag-shopping');
 let cartData = document.getElementById('cartdata');
+let logoIcon = document.querySelector('.logo');
 let storeData = JSON.parse(localStorage.getItem('key')) || [];
 
 cartData.textContent = storeData.length;
+
+logoIcon.addEventListener('click', () => {
+    window.location.href = 'index.html';
+})
 
 async function getdata() {
     let fetched_data = await fetch('https://63f5e61459c944921f68bb09.mockapi.io/products');
@@ -58,7 +63,7 @@ function displayData(data) {
                 }
                 addProduct.style.display = 'inline';
                 addProduct.textContent = 'Product added to bag✅';
-                // addProduct.style.transition = '0.5s ease-in-out'
+
                 setTimeout(() => {
                     addProduct.style.display = 'none';
                 }, 4000)
