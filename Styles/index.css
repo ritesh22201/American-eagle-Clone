@@ -15,6 +15,7 @@
     margin: 0px;
     padding: 0px;
     font-family: "AvenirNext-Regular",sans-serif;
+    /* border: 1px solid red; */
 }
 
 /* ***************************************************** */
@@ -449,10 +450,12 @@ hr {
 /* vImgv */
 
 .vImgv{
-    margin: 0px 0px 0px -27px;
+    margin: 0px 0px 0px -15px;
     padding: 0px;
     display: flex;
     margin: auto;
+    /* width: 100%; */
+    /* height: 100%; */
     /* align-items: center; */
     /* width: 100%; */
 }
