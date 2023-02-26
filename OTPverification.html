@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login || Register</title>
+    <title>Verification</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,39 +21,52 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        body {
+            background-image: url(/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg);
+        }
+
         .modal-dialog {
+
             margin: auto;
+            margin-top: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 421px;
             height: auto;
+            border-radius: 3px;
             padding-top: 5px;
             padding: 20px;
-            border-radius: 3px;
-            background-image: url("/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg");
+            background-image: url(/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg);
             background-size: contain;
             background-position: 0;
-            margin-top: 50px;
             /* background: rgba(76, 175, 80, 0.3) */
             /* opacity: 0.5; */
             /* border: solid black; */
-            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
         }
 
         #welIa {
             text-align: left;
-            margin-top: 0px;
-
         }
 
         .fa-solid {
             margin-top: 7px;
             border: none;
             display: flex;
-            margin-left: 95%;
-            cursor: pointer;
+            margin-left: 92%;
+        }
+
+        .fa-arrow-left {
+            margin: 0;
+        }
+
+        .icon__div {
+            padding: 3px;
+            display: flex;
+            /* border: solid black; */
         }
 
         #hr {
@@ -61,90 +74,41 @@
             border: 1px solid black;
         }
 
-        #mobile-number {
-            width: 100%;
-            padding: 12px;
-            font-size: large;
-            border-color: grey;
-            margin-top: 5px;
-        }
-
-        #submit {
-            width: 100%;
-            padding: 12px;
-            margin-top: 30px;
-            font-size: 12px;
-            background-color: black;
-            color: white;
-            cursor: pointer;
-        }
-
-        #socLogin {
-            font-size: smaller;
-        }
-
-        #gLink {
-            margin-top: 5px;
-            border-style: outset;
-            width: 50%;
-            /* border: solid black; */
-            text-align: center;
-            font-size: x-large;
-            padding: 8px;
-            cursor: pointer;
-        }
-
-        #google {
-            font-size: large;
-        }
-
-        #logReg {
-            color: rgb(167, 129, 129);
-            margin-top: 25px;
-        }
-
-        #msg {
-            text-align: center;
-            color: white;
-            background-color: black;
-        }
-
-        #navbar {
-            width: 100%;
-            height: 80px;
-            /* border: solid black; */
-            /* background-color: */
+        .otp {
+            border: solid black;
+            padding: 5px;
+            margin: auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: larger;
-            background-color: #EE806B;
-            color: white;
+            border-color: green;
+            color: green;
         }
 
-        .aename {
+        #otp {
             width: 100%;
-            height: 70px;
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+
+        .otpDIv {
+            /* border: solid black; */
             display: flex;
-            justify-content: left;
-            align-items: center;
-            background-color: rgb(229, 220, 220);
+            justify-content: center;
+            /* height: 40px; */
         }
 
-        .aename>img {
-            /* font-size: x-large; */
-            cursor: pointer;
-            width: 55px;
-            margin-left: 15px;
-        }
-
-        body {
+        #verify {
             width: 100%;
-            background-image: url(/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg);
-            background-size: cover;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
         }
 
-        #invalidnum {
+        #invalid {
             color: red;
         }
 
@@ -240,100 +204,50 @@
             justify-content: space-between;
         }
 
-        .topOfferSlide {
+        #navbar {
+            width: 100%;
+            height: 80px;
+            /* border: solid black; */
+            /* background-color: */
             display: flex;
-            margin: auto;
+            justify-content: center;
+            align-items: center;
+            font-size: larger;
             background-color: #EE806B;
-            padding-top: 20px;
-            position: sticky;
-            z-index: 1;
-        }
-
-        .mySlides {
-            display: flex;
-            margin: auto;
-            background-color: #EE806B;
-            float: left;
-        }
-
-        .a {
-            text-decoration: none;
-            font-size: 11px;
-        }
-
-        .mySlides a {
-            /* font-weight: bolder; */
-            /* text-decoration: none; */
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 17px;
-            letter-spacing: 0.6px;
-            color: white;
-            text-align: center;
-            font-weight: bold;
-            padding-left: 7px;
-        }
-
-        .mySlides p {
-            margin-top: 0px;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 17px;
-            letter-spacing: 0.6px;
             color: white;
         }
 
-        .dotSlide {
-            text-align: center;
-            padding-bottom: 10px;
-            height: 20px;
-            background-color: #EE806B;
+        .aename {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            background-color: rgb(229, 220, 220);
         }
 
-        .dot {
-            height: 4px;
-            width: 4px;
-            margin: 0 1px;
-            background-color: #ffffff;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
+        .aename>img {
+            /* font-size: x-large; */
+            cursor: pointer;
+            width: 55px;
+            margin-left: 15px;
         }
     </style>
 
 </head>
 
 <body>
-    <div class="topOfferSlide">
-        <div class="mySlides">
-            <a class="a" href="/product.html">25% off ALL new arrivals!</a>
-            <a href="/product.html">Shop Women</a>
-            <a href="/product.html">Shop Men</a>
-            <a href="/product.html">Shop Aerie</a>
-            <a href="/product.html">Details</a>
-        </div>
-        <div class="mySlides">
-            <a class="a" href="/product.html">25-40% off jeans & cargos!</a>
-            <a href="/product.html">Shop Women’s Jeans</a>
-            <a href="/product.html">Shop Men’s Jeans</a>
-            <a href="/product.html">Shop Women's Cargos</a>
-            <a href="/product.html">Details</a>
-        </div>
-        <div class="mySlides">
-            <a class="a" href="/product.html">Free shipping on orders over $100!</a>
-            <a href="/product.html">Details</a>
-        </div>
-    </div>
-    <div class="dotSlide">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+    <div class="navsec">
+        <nav id="navbar">
+            <marquee behavior="" direction="">25% off jeans & cargos!</marquee>
+            <marquee behavior="" direction="">Free shipping on orders $75+ for Real Rewards members, plus so many more
+                perks!</marquee>
+        </nav>
+        <section class="aename">
+            <img src="/icon.png" alt="" id="icon"><img src="/aerie.svg" alt="">
+        </section>
     </div>
 
-    <section class="aename">
-        <img src="/icon.png" alt="" id="icon"><img src="/aerie.svg" alt="">
-
-    </section>
     <section class="modal-dialog">
 
     </section>
@@ -414,102 +328,86 @@
         </div>
     </footer>
 </body>
+
 <script>
     let parentBox = document.querySelector(".modal-dialog")
     parentBox.innerHTML = `
             
-            <div>
-    <i class="fa-sharp fa-solid fa-xmark"></i>
-    <hr id="hr">
-    <br>
-    <span>WELCOME TO</span><h1 id="welIa">INDIAN EAGLES</h1>
-    <p id="logReg">Login / Register with us to get latest updates and manage your orders</p>
-    <form>
-    <input type="number" placeholder="Enter mobile number" id="mobile-number"><br> 
-    <div id="msg-div"><h3 id="invalidnum"></h3></div>
-    <input type="submit" value="NEXT" id="submit">
-    </form>
-    <br>
     <div>
-    <lable id="socLogin">LOGIN WITH SOCIAL MEDIA</label>
-        <div id="gLink">
-            <i class="fa-brands fa-google"></i>
-            <span id="google">Google</span>
+        <div class="icon__div">   
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-sharp fa-solid fa-xmark"></i>
         </div>
-    </div>
+        <h3>OPT VERIFICATION</h3>
+        <hr id="hr">
+        <br>
+        <p>Enter OTP sent on your registered Mobile Number.
+            <b>NUMBER</b>
+        </p>
+        <br>
+        <div class="otp">
+            <p>OTP has been sent to your system. Please enter below.<p>
+        </div>
+        <br>
+        <div class = "otpDIv">
+            <h2 id="uniqeuOtp"></h2>    
+        </div>
+        <input type="number" placeholder="Enter the OTP" id="otp">
+        <div id="invMsg">
+            <h2 id="invalid"></h2>
+        </div>
+        <br>
+        <div>
+            <p id="resend">Resend OTP</p>
+            <br>
+            <button id="verify">VERIFY</button>
+        </div>
     </div>
     `
 
-    let red2hp = document.querySelector(".aename")
-    let close = document.querySelector("fa-solid")
-    let alertmsg = document.getElementById("invalidnum")
-    let formEl = document.querySelector("form")
-    let numInp = document.getElementById("mobile-number")
+
+
+    let otpMsg = document.querySelector("#uniqeuOtp")
     let url = "https://63f6414b59c944921f708a51.mockapi.io/login"
+    let otpInp = document.getElementById("otp")
 
-    red2hp.addEventListener("click", () => {
-        window.location.href = ""
-    })
-
-    formEl.addEventListener("submit", async (e) => {
-        e.preventDefault()
-        let tostr = numInp.value.toString()
-        if (tostr.length < 10 || tostr.length == 0) {
-            alertmsg.innerText = "Invalid number!!"
-            return
-        }
+    window.addEventListener("load", async (e) => {
         try {
-            let entMobile = {
-                Mobile: Number(numInp.value),
-                name: null,
-                dob: null,
-                email: null,
-                gender: null
-            }
             let req = await fetch(url)
             let res = await req.json()
-            for (let i = 0; i < res.length; i++) {
-                if (res[i].Mobile == entMobile.Mobile) {
-                    window.location.href = "/alreadyMember.html"
-                    return
-                }
-            }
-            let request = await fetch(url, {
-                method: 'POST',
-                body: JSON.stringify(entMobile),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            console.log(request)
-            window.location.href = "/ifNotMember.html"
+            setTimeout(() => {
+                otpMsg.innerText = res[res.length - 1].otp
+            }, 3000);
+            console.log(res)
         } catch (error) {
-            console.log(error)
+
+        }
+    })
+    let verifyButton = document.getElementById("verify")
+    let invalidmsg = document.getElementById("invalid")
+
+    verifyButton.addEventListener("click", async (e) => {
+        e.preventDefault()
+        try {
+            let req = await fetch(url)
+            let res = await req.json()
+            if (res[res.length - 1].otp == Number(otpInp.value)) {
+                window.location.href = "/index.html"
+            } else {
+                invalidmsg.innerText = "Invalid OTP!!"
+            }
+        } catch (error) {
+
         }
     })
     let closebtn = document.querySelector(".fa-sharp")
     closebtn.addEventListener("click", (e) => {
         window.location.href = "/"
     })
-    let slideIndex = 0;
-    topOfferSlide();
-
-    function topOfferSlide() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        setTimeout(topOfferSlide, 2000); // Change image every 2 seconds
-    }
+    let back = document.querySelector(".fa-arrow-left")
+    back.addEventListener("click", (e) => {
+        window.location.href = "/createNewAccount.html"
+    })
 </script>
 
 </html>

@@ -39,13 +39,14 @@
             /* background: rgba(76, 175, 80, 0.3) */
             /* opacity: 0.5; */
             /* border: solid black; */
-            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
         }
 
         #welIa {
             text-align: left;
             margin-top: 0px;
-
+            color: #EE806B;
         }
 
         .fa-solid {
@@ -67,6 +68,7 @@
             font-size: large;
             border-color: grey;
             margin-top: 5px;
+            border-radius: 10px;
         }
 
         #submit {
@@ -77,6 +79,7 @@
             background-color: black;
             color: white;
             cursor: pointer;
+            border-radius: 10px;
         }
 
         #socLogin {
@@ -92,6 +95,7 @@
             font-size: x-large;
             padding: 8px;
             cursor: pointer;
+            border-radius: 5px;
         }
 
         #google {
@@ -131,7 +135,7 @@
             background-color: rgb(229, 220, 220);
         }
 
-        .aename>img {
+        .aename img {
             /* font-size: x-large; */
             cursor: pointer;
             width: 55px;
@@ -331,8 +335,12 @@
     </div>
 
     <section class="aename">
-        <img src="/icon.png" alt="" id="icon"><img src="/aerie.svg" alt="">
-
+        <a href="/index.html">
+            <img src="/icon.png" alt="" id="icon1">
+        </a>
+        <a href="/index.html">
+            <img src="/aerie.svg" alt="" id="icon2">
+        </a>
     </section>
     <section class="modal-dialog">
 
@@ -470,7 +478,7 @@
             let res = await req.json()
             for (let i = 0; i < res.length; i++) {
                 if (res[i].Mobile == entMobile.Mobile) {
-                    window.location.href = "/alreadyMember.html"
+                    window.location.href = "/OTPverification.html"
                     return
                 }
             }
@@ -482,7 +490,7 @@
                 }
             })
             console.log(request)
-            window.location.href = "/ifNotMember.html"
+            window.location.href = "/createNewAccount.html"
         } catch (error) {
             console.log(error)
         }

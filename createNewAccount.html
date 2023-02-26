@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login || Register</title>
+    <title>Create New Account</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,50 +23,48 @@
 
         .modal-dialog {
             margin: auto;
+            margin-top: 40px;
+            margin-bottom: 25px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 421px;
+            width: 450px;
             height: auto;
             padding-top: 5px;
             padding: 20px;
-            border-radius: 3px;
             background-image: url("/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg");
             background-size: contain;
             background-position: 0;
-            margin-top: 50px;
             /* background: rgba(76, 175, 80, 0.3) */
             /* opacity: 0.5; */
             /* border: solid black; */
-            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            border-radius: 3px;
+            /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
         }
 
         #welIa {
             text-align: left;
-            margin-top: 0px;
-
         }
 
         .fa-solid {
             margin-top: 7px;
             border: none;
             display: flex;
-            margin-left: 95%;
+            margin-left: 92%;
             cursor: pointer;
         }
 
-        #hr {
-            width: 100%;
-            border: 1px solid black;
+        .fa-arrow-left {
+            margin: 0;
+            cursor: pointer;
         }
 
-        #mobile-number {
-            width: 100%;
-            padding: 12px;
-            font-size: large;
-            border-color: grey;
-            margin-top: 5px;
+        .icon__div {
+            padding: 3px;
+            display: flex;
+            /* border: solid black; */
         }
 
         #submit {
@@ -76,37 +74,30 @@
             font-size: 12px;
             background-color: black;
             color: white;
+            font-size: 13px;
+            border-radius: 10px;
             cursor: pointer;
         }
 
-        #socLogin {
-            font-size: smaller;
+        #Name,
+        #DOB,
+        #mail,
+        #MNumber {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 17px;
+            border-radius: 8px;
         }
 
-        #gLink {
-            margin-top: 5px;
-            border-style: outset;
-            width: 50%;
+        #MNumber {
+            margin-bottom: 15px;
+        }
+
+        #numDiv {
             /* border: solid black; */
-            text-align: center;
-            font-size: x-large;
-            padding: 8px;
-            cursor: pointer;
-        }
-
-        #google {
-            font-size: large;
-        }
-
-        #logReg {
-            color: rgb(167, 129, 129);
-            margin-top: 25px;
-        }
-
-        #msg {
-            text-align: center;
-            color: white;
-            background-color: black;
+            display: flex;
+            justify-content: space-evenly;
         }
 
         #navbar {
@@ -144,7 +135,14 @@
             background-size: cover;
         }
 
-        #invalidnum {
+        .navsec {
+            position: static;
+        }
+
+        #nameEL,
+        #dateEl,
+        #emailEl,
+        #numEl {
             color: red;
         }
 
@@ -239,101 +237,21 @@
             display: flex;
             justify-content: space-between;
         }
-
-        .topOfferSlide {
-            display: flex;
-            margin: auto;
-            background-color: #EE806B;
-            padding-top: 20px;
-            position: sticky;
-            z-index: 1;
-        }
-
-        .mySlides {
-            display: flex;
-            margin: auto;
-            background-color: #EE806B;
-            float: left;
-        }
-
-        .a {
-            text-decoration: none;
-            font-size: 11px;
-        }
-
-        .mySlides a {
-            /* font-weight: bolder; */
-            /* text-decoration: none; */
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 17px;
-            letter-spacing: 0.6px;
-            color: white;
-            text-align: center;
-            font-weight: bold;
-            padding-left: 7px;
-        }
-
-        .mySlides p {
-            margin-top: 0px;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 17px;
-            letter-spacing: 0.6px;
-            color: white;
-        }
-
-        .dotSlide {
-            text-align: center;
-            padding-bottom: 10px;
-            height: 20px;
-            background-color: #EE806B;
-        }
-
-        .dot {
-            height: 4px;
-            width: 4px;
-            margin: 0 1px;
-            background-color: #ffffff;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
     </style>
 
 </head>
 
 <body>
-    <div class="topOfferSlide">
-        <div class="mySlides">
-            <a class="a" href="/product.html">25% off ALL new arrivals!</a>
-            <a href="/product.html">Shop Women</a>
-            <a href="/product.html">Shop Men</a>
-            <a href="/product.html">Shop Aerie</a>
-            <a href="/product.html">Details</a>
-        </div>
-        <div class="mySlides">
-            <a class="a" href="/product.html">25-40% off jeans & cargos!</a>
-            <a href="/product.html">Shop Women’s Jeans</a>
-            <a href="/product.html">Shop Men’s Jeans</a>
-            <a href="/product.html">Shop Women's Cargos</a>
-            <a href="/product.html">Details</a>
-        </div>
-        <div class="mySlides">
-            <a class="a" href="/product.html">Free shipping on orders over $100!</a>
-            <a href="/product.html">Details</a>
-        </div>
+    <div class="navsec">
+        <nav id="navbar">
+            <marquee behavior="" direction="">25% off jeans & cargos!</marquee>
+            <marquee behavior="" direction="">Free shipping on orders $75+ for Real Rewards members, plus so many more
+                perks!</marquee>
+        </nav>
+        <section class="aename">
+            <img src="/icon.png" alt="" id="icon"><img src="/aerie.svg" alt="">
+        </section>
     </div>
-    <div class="dotSlide">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-
-    <section class="aename">
-        <img src="/icon.png" alt="" id="icon"><img src="/aerie.svg" alt="">
-
-    </section>
     <section class="modal-dialog">
 
     </section>
@@ -414,102 +332,147 @@
         </div>
     </footer>
 </body>
+
 <script>
     let parentBox = document.querySelector(".modal-dialog")
     parentBox.innerHTML = `
             
-            <div>
-    <i class="fa-sharp fa-solid fa-xmark"></i>
-    <hr id="hr">
-    <br>
-    <span>WELCOME TO</span><h1 id="welIa">INDIAN EAGLES</h1>
-    <p id="logReg">Login / Register with us to get latest updates and manage your orders</p>
-    <form>
-    <input type="number" placeholder="Enter mobile number" id="mobile-number"><br> 
-    <div id="msg-div"><h3 id="invalidnum"></h3></div>
-    <input type="submit" value="NEXT" id="submit">
-    </form>
-    <br>
     <div>
-    <lable id="socLogin">LOGIN WITH SOCIAL MEDIA</label>
-        <div id="gLink">
-            <i class="fa-brands fa-google"></i>
-            <span id="google">Google</span>
+        <div class="icon__div">   
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-sharp fa-solid fa-xmark"></i>
         </div>
-    </div>
+        <h3>CREATE NEW ACCOUNT</h3>
+        <hr id="hr">
+        <br>
+        <p>Enter OTP sent on your registered Mobile Number.
+        </p>
+        <div id="numDiv">
+        <b>NUMBER</b><a href="/index.html" >CHANGE</a>
+        </div>
+        <br>
+        <form>
+            <input type="text" placeholder="Name *" id="Name">
+            <span id="nameEL"></span>
+            <br>
+            <br>
+            <lable>Date OF Birth<label>
+            <input type="date" name="" id="DOB" placeholder="">
+            <span id="dateEl"></span>
+            <br>
+            <br>
+            <input type="email" id="mail" placeholder="Email ID *">
+            <span id="emailEl"></span>
+            <br>
+            <br>
+            <input type="Number" id="MNumber" placeholder="Mobile Number">
+            <span id="numEl"></span><br><br>
+            <span id="gen">GENDER<span><br>
+            <input type="radio" id="Male" name="gender" class="gender" value="Male">
+            <label for="Male">Male</label><br>
+            <input type="radio" id="Female" name="gender" class="gender" value="Female">
+            <label for="Female">Female</label><br>
+            <input type="radio" id="Other" name="gender" class="gender" value="Other">
+            <label for="Other">Other</label>
+            <span id="gen"></span>
+            <p>By proceeding i agree to the <a href="#">Terms & Conditions</a></p>
+
+            <input type="submit" value="SEND OTP" id="submit">
+        </form>
+        <br>
+    <div>
+   
     </div>
     `
-
-    let red2hp = document.querySelector(".aename")
-    let close = document.querySelector("fa-solid")
-    let alertmsg = document.getElementById("invalidnum")
+    let numberSHowing = document.querySelector("b")
     let formEl = document.querySelector("form")
-    let numInp = document.getElementById("mobile-number")
+    let nameInp = document.getElementById("Name")
+    let DOB = document.getElementById("DOB")
+    let email = document.getElementById("mail")
+    let nameEl = document.getElementById("nameEL")
+    let dateEl = document.getElementById("dateEl")
+    let emialEl = document.getElementById("emailEl")
+    let genEl = document.getElementById("gen")
+    let numberInp = document.getElementById("MNumber")
+    let numEl = document.getElementById("numEl")
+    let gender = document.querySelectorAll('input[name="gender"]')
     let url = "https://63f6414b59c944921f708a51.mockapi.io/login"
+    let fetched;
 
-    red2hp.addEventListener("click", () => {
-        window.location.href = ""
+    async function fetching() {
+        try {
+            let req = await fetch(url)
+            let res = await req.json()
+            fetched = res
+            console.log(fetched)
+            numberSHowing.innerText = res[res.length - 1].Mobile
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    window.addEventListener("load", () => {
+        fetching()
     })
 
     formEl.addEventListener("submit", async (e) => {
         e.preventDefault()
-        let tostr = numInp.value.toString()
-        if (tostr.length < 10 || tostr.length == 0) {
-            alertmsg.innerText = "Invalid number!!"
+        if (nameInp.value == "") {
+            nameEl.innerText = `Invalid Name!!`
             return
         }
+        else if (DOB.value == "") {
+            dateEl.innerText = `Enter Valid Date!!`
+            return
+        }
+        else if (email.value == "") {
+            emialEl.innerText = `Enter valid email!!`
+            return
+        }
+        let x = numberInp.value.toString()
+        if (x.length == 0 || x.length < 10) {
+            numEl.innerText = "Invalid mobile number!!"
+            return
+        }
+        let selectedVal;
+        for (let radiobtn of gender) {
+            if (radiobtn.checked) {
+                selectedVal = radiobtn.value
+                break;
+            }
+        }
         try {
-            let entMobile = {
-                Mobile: Number(numInp.value),
-                name: null,
-                dob: null,
-                email: null,
-                gender: null
+            let userDetails = {
+                Mobile: Number(numberInp.value),
+                name: nameInp.value,
+                dob: DOB.value,
+                email: email.value,
+                gender: selectedVal,
+                otp: Math.floor(Math.random() * 10000)
             }
-            let req = await fetch(url)
-            let res = await req.json()
-            for (let i = 0; i < res.length; i++) {
-                if (res[i].Mobile == entMobile.Mobile) {
-                    window.location.href = "/alreadyMember.html"
-                    return
-                }
-            }
-            let request = await fetch(url, {
-                method: 'POST',
-                body: JSON.stringify(entMobile),
+            let req = await fetch(url, {
+                method: "POST",
+                body: JSON.stringify(userDetails),
                 headers: {
                     'Content-Type': 'application/json'
                 }
             })
-            console.log(request)
-            window.location.href = "/ifNotMember.html"
+            let res = await req.json()
+            window.location.href = "/OTPverification.html"
         } catch (error) {
             console.log(error)
         }
     })
     let closebtn = document.querySelector(".fa-sharp")
     closebtn.addEventListener("click", (e) => {
-        window.location.href = "/"
+        window.location.href = "/index.html"
     })
-    let slideIndex = 0;
-    topOfferSlide();
-
-    function topOfferSlide() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        setTimeout(topOfferSlide, 2000); // Change image every 2 seconds
-    }
+    let back = document.querySelector(".fa-arrow-left")
+    back.addEventListener("click", (e) => {
+        window.location.href = "/createNewAccount.html"
+    })
+    // console.log()
 </script>
+
+
 
 </html>
