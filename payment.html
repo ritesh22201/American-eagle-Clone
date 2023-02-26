@@ -20,26 +20,33 @@
     <header id="header">
         <div id="navHeader" class="navHeader">
             <div id="logo_Section" class="wid50 flex logo_Section">
-                <div class="wid50">
-                    <img src="./Media/logo/Pink Magenta White Modern Online Shop Logo.png" alt="" class="imglogo">
+                <div class="mainlogo">
+                    <a href="./index.html"> <img src="./Media/logo/icon.png" alt="" class="logoimg"></a>
+                    
                 </div>
-                <div class=" wid50">
+                <div class=" aerie">
 
-                    <img src="./Media/images/aerie (1).svg" alt="" class="">
+                    <img src="./Media/images/aerie (1).svg" alt="" class="logoimg">
                 </div>
             </div>
             <div id="flagAndCart_Section" class="wid50 flex flagAndCart_Section">
-                <div>
-                    <img src="./Media/images/flag__IN.png" alt="" class="imflag mar12">
+                <div class="wid20">
+                    <img src="./Media/images/flag__IN.png" alt="" class="wid30 mar12">
                 </div>
-                <div>
+                <div class="wid20">
                     <i class="fa-solid fa-bag-shopping mar12"></i>
                 </div>
 
 
             </div>
         </div>
-
+        <div id="succesHeader" class=" displaynone continueShopping wid8">
+            <div class="succesInnerDiv">   
+                <h3>Your Order Placed Success Fully .Please Coninue Shopping</h3>
+            <button id="continueShoppingbtn"><a href="./product.html" class="anchortext">Continue Shopping</a></button>
+            </div>
+            
+        </div>
     </header>
     <div id="main_Body" class="main_Body">
         <main id="mainBody_wrapper">
@@ -92,7 +99,8 @@
                                             placeholder="City" required>
                                     </div>
                                     <div class="wid50">
-                                        <select name="" id="" class="seclect inputsstyle ">
+                                        <select name="" id="state" class="seclect inputsstyle ">
+                                            <option value="Select State">Select State</option>
                                             <option value="Delhi">Delhi</option>
                                             <option value="Karnataka">Karnataka</option>
                                             <option value="Andhra">Andhra</option>
@@ -103,7 +111,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <input type="text" id="PostalCode"
+                                    <input type="number" id="PostalCode"
                                         class=" mb25 zipcode height36 inputsstyle height36" placeholder="Zip Code2"
                                         required>
                                 </div>
@@ -124,7 +132,7 @@
                                 <h4>Shipping Method</h4>
                             </div>
                             <div class="arrivalDescription">
-                                <p>Order by 1PM EST to receive by estimated dates below.</p>
+                                <p class="termstext">Order by 1PM EST to receive by estimated dates below.</p>
                             </div>
                             <div id="methodOption" class="wid100">
                                 <div id="methodOptionWrapper" class="wid100 arrivalDescription">
@@ -134,11 +142,11 @@
                                                 <input type="radio" name="" id="">
                                                 <div class="padleft">
                                                     <h4>Standard</h4>
-                                                    <p>Arrives between start-enddate</p>
+                                                    <p class="termstext">Arrives between <span id="startDate"></span>- <span id="toDate"></span></p>
                                                 </div>
                                             </div>
                                             <div>
-                                                <p>7</p>
+                                                <p>$7</p>
                                             </div>
                                         </div>
 
@@ -149,13 +157,13 @@
                                             <div class="flex">
                                                 <input type="radio" name="" id="">
                                                 <div class="padleft">
-                                                    <h4>Standard</h4>
-                                                    <p>Arrives between start-enddate</p>
+                                                    <h4>Two Day</h4>
+                                                    <p class="termstext">Arrives between <span id="twoDaystartDate"></span> -  <span id="twoDaytoDate"></span></p>
                                                 </div>
                                             </div>
 
                                             <div>
-                                                <p>7</p>
+                                                <p>$10</p>
                                             </div>
                                         </div>
 
@@ -166,13 +174,13 @@
                                             <div class="flex">
                                                 <input type="radio" name="" id="">
                                                 <div class="padleft">
-                                                    <h4>Standard</h4>
-                                                    <p>Arrives between start-enddate</p>
+                                                    <h4>Overnight</h4>
+                                                    <p class="termstext">Arrives between <span id="overNight"></span></p>
                                                 </div>
                                             </div>
 
                                             <div>
-                                                <p>7</p>
+                                                <p>$20</p>
                                             </div>
                                         </div>
 
@@ -183,7 +191,7 @@
                     </div>
                     <div>
                         <h4 class="sMHead"> Payment</h4>
-                        <p class="fontsmall ">
+                        <p class="termstext ">
                             The billing info you enter will be saved. Manage your saved payments in account settings.
                         </p>
                     </div>
@@ -223,26 +231,26 @@
                                         </div>
 
                                         <div class="mb25">
-                                            <input type="number" name="" id=""
+                                            <input type="tel" name="" id="cardNumber"
                                                 class="wid100 inputsstyle height42 textindent"
-                                                placeholder="Card Number*" required>
+                                                placeholder="Card Number*" pattern="[0-9\s]{13,19}"  max="12">
                                         </div>
 
                                         <div class=" flexrow wid100 mb25 justifycontent">
                                             <div class="wid40">
-                                                <input type="text" name="" id=""
+                                                <input type="text" name="" id="expiryDate"
                                                     class="inputsstyle height42 wid100 textindent"
                                                     placeholder="Exp. (MM/YY)" required>
                                             </div>
 
                                             <div class="wid40 ">
-                                                <input type="number" name="" id=""
+                                                <input type="number" name="" id="cvv"
                                                     class="inputsstyle height42 wid100 textindent" placeholder="CVV"
-                                                    required>
+                                                    required maxlength="3">
                                             </div>
                                         </div>
                                         <div class="wid100 mb25">
-                                            <input type="number" name="" id=""
+                                            <input type="number" name="" id="phoneNumber"
                                                 class="wid100 inputsstyle height42 textindent"
                                                 placeholder="Phone Number" required>
                                         </div>
@@ -353,19 +361,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="payemnetOptioninnerDiv">
-                                            <div class="flexrow payMethods height42">
-                                                <div class="wid8">
-                                                    <input type="radio" class="height42">
-                                                </div>
-                                                <div class="wid25">
-                                                    <i class="fa-duotone fa-square-dollar"></i>
-                                                </div>
-                                                <div>
-                                                    <h5>Cash App Pay</h5>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
 
                                     </div>
                                 </div>
@@ -380,7 +376,7 @@
                                 </div>
                                 <div>
                                     <div>
-                                        <p>Save <b>$7.88</b> (20%) & earn 2x points* on this purchase when you open &
+                                        <p class="termstext">Save <b>$7.88</b> (20%) & earn 2x points* on this purchase when you open &
                                             use a Real Rewards credit card (you'll earn 2x on future purchase, too!).
                                         </p>
                                     </div>
@@ -399,11 +395,13 @@
 
                         </div>
 
-                        <div >   
+                        <div class="footerbtmfirstdiv" >   
                             <button id="placeOrder"class="wid100">Place Order</button>
                         </div>
                     </div>
-
+                    <div class="footerbtmfirstdiv">   
+                        <p class="termstext">By placing an order, you affirm that you have read, understood, and consent to the <a href="" class="">Privacy Notices</a>and <a href="" class="">Terms of Use</a></p>
+                    </div>
 
                 </div>
                 <!-- order summary section -->
@@ -499,32 +497,14 @@
                             <div id="orderSummaryWrapper" class=" colorash">
                                 <div class="">
                                     <div class="pointsDeatils ">
-                                        <p>Merchandise:</p>
-                                        <p>$51</p>
+                                        <p >Merchandise:</p>
+                                        <p id="merchandise">$51</p>
                                     </div>
                                     <div class="pointsDeatils ">
                                         <p>Shipping:</p>
                                         <p>$5</p>
                                     </div>
-                                    <div>
-                                        <p>Spend $35.61 more for FREE standard shipping.</p>
-
-                                    </div>
-                                    <div>
-                                        <div class="pointsDeatils ">
-                                            <p>Discounts:</p>
-                                            <p>$-30</p>
-                                        </div>
-                                        <div class="pointsDeatils ">
-                                            <p>Real Rewards Extra 23% Off Your Purchase </p>
-                                            <p>$122</p>
-                                        </div>
-
-                                    </div>
-                                    <div class="pointsDeatils ordersummarydiv">
-                                        <p>Merchandise After Discount:</p>
-                                        <p>$300</p>
-                                    </div>
+                                    
                                     <div class="pointsDeatils ordersummarydiv">
                                         <p>Tax:</p>
                                         <p>$0</p>
@@ -539,7 +519,7 @@
                                     <div class="pointsDeatils ">
                                         <p class="ordertotal">Order Total :
                                         <p>
-                                        <p class="ordertotal ">$500</p>
+                                        <p id="total" class="ordertotal ">$500</p>
                                     </div>
                                     <p class="ordersummaryFootertext">Your credit card won't be charged until the entire
                                         order ships.</p>
@@ -556,8 +536,43 @@
                 </div>
             </div>
         </main>
+        <footer class="footer">  
+            <div class="footerinnerDiv">   
+                
+                <div class="footerbtmfirstdiv">   
+                   <p class="termstext"> *Cardmember offers are subject to credit approval and a Real Rewards credit card must be used as the sole payment type. See <a href="">Real Rewards Terms & Conditions</a>for details</p>
+                </div>
+                <div class="footerbtmsectdiv">   
+                    <p class="termstext"><strong>20% Off</strong>: Take 20% off your first AE® or Aerie® purchase when you open and use your Real Rewards credit card.  No coupon required in store. Discount code for online will be provided upon credit approval. Discount applied prior to sales tax and shipping & handling. Cannot be combined with any other coupon or discount code. Not valid for 3rd party merchandise, previously purchased merchandise or gift cards. Valid in US (including PR) only. No cash value.</p>
+                </div>
+            </div>  
+            <div><hr></div>
+            <div id="footerBottom"> 
+                  
+               <div class="btmdiv footerbtmfirstdiv" >  
+                    <div class="flex justifycontent">   
+                        <div class=" flex  justifycontent wid50"> 
+                            <p class="termstext">Privacy Notices</p>
+                            <p class="termstext">Terms of Use</p>
+                            <p class="termstext">Help</p>
+                            <p class="termstext">Returns+Exchanges</p>
+                        </div>
+                        <div class=" flex wid50 justifycontenttextleft"> 
+                            <p class="termstext">Question? 1(888) 232-4535 or Email US</p>
+                        </div>
+                    </div>  
+                    <div class="footerbtmfirstdiv">   
+                        <p class="termstext">© 2023 AEO Management Co. All Rights Reserved</p>
 
+                    </div>
+                    <div class="">   
+                        <img src="./Media/images/Footer-logos.svg" alt="">
+                    </div>
+               </div> 
+            </div>
+        </footer>
     </div>
+    
 
 </body>
 <script src="./Scripts/payment.js"></script>

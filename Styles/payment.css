@@ -24,6 +24,9 @@ html,body{
 .wid100{
     width: 100%;
 }
+.wid30{
+    width:30% ;
+}
 
 .wid50{
     width: 50%;
@@ -51,9 +54,9 @@ html,body{
     align-items: center;
 }
 .imglogo{
-    width: 100%;
+    width: 40%;
     height: 84px;
-    object-fit: contain;
+   
 }
 .imflag{
     width: 10%;
@@ -85,9 +88,62 @@ html,body{
     align-items: center;
     width: 100%;
     height: 100%;
+    border-bottom: 1px solid #d6d6d6;
+
+}
+.continueShopping{
+    width: 100%;
+    height: 100%;
+    color:rgb(25, 207, 25);
+    text-align: center;
+    font-size: 22px;
+    background-color: #c8c8c8;
+    opacity: 10px;
+    
+}
+.succesInnerDiv{
+    width: 70%;
+    margin: auto;
+}
+.anchortext{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.anchortextEdit{
+    text-decoration: none;
+}
+.anchortext_Terms{
+    text-decoration: none;
+    color: #666;
+}
+.colorRed{
+    color: red;
+}
+#continueShoppingbtn{
+    background-color: #13f713;
+    width: 20%;
+    padding: 15px;
+    border-radius: 40px;
+    border-color: #b3eeb3;
+    font-size: 18px;
 }
 .logo_Section{
+    width: 80%;
+    justify-content: left;
     height: 100%;
+}
+.logoimg{
+    width: 60%;
+}
+.mainlogo{
+    margin-left: 20px;
+    width: 10%;
+    border: #d6d6d6;
+}
+.aerie{
+    margin-left: 20px;
+    width: 10%;
 }
 .flagAndCart_Section{
 
@@ -437,5 +493,47 @@ background: #385adc;
 border-color: #385adc;
 border-radius: 25px;
 height: 41px;
+}
+.footer{
+    width: 100%;
+}
+.footerinnerDiv{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.footerbtmfirstdiv{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+}
+.footerbtmsectdiv{
+    padding-top: 12px;
+    padding-bottom: 22px;
+    box-sizing: border-box;
+}
+#footerBottom{
+    width: 100%;
+}
+.btmdiv{
+    width: 80%;
+    margin: auto;
+
+}
+.termstext{
+    line-height: 16px;
+    font-size: 11px;
+    color: #666;
+}
+.justifycontenttextleft{
+    justify-content: flex-end;
+}
+.anchortext{
+    text-decoration: none;
+    line-height: 16px;
+    font-size: 11px;
+    font-weight: 500;
 }
 
