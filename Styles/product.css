@@ -15,7 +15,7 @@
 
 #nav1 span {
     width: 40%;
-    margin: auto;
+    margin-left: 330px;
     color: white;
 }
 
@@ -49,11 +49,17 @@ i:hover{
 }
 
 #nav2>div:nth-child(2) {
-    width: 15%;
+    width: 35%;
+    display: flex;
+    align-items: center;
     margin-right: 30px;
     font-size: 25px;
     display: flex;
     justify-content: space-between;
+}
+
+#search{
+    font-size: 20px;
 }
 
 #word-logo {
@@ -85,6 +91,25 @@ i:hover{
     color: #ef8874;
 }
 
+#cartdata{
+    width: 25px;
+    height: 25px;
+    background-color:#6b7aee;
+    color: white;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 80px;
+    right: 15px;
+    opacity: 0.95;
+    display: none;
+    border-radius: 50%;
+}
+
+button:active{
+    scale: 0.98;
+}
+
 .headline{
     margin: 20px 0;
     padding: 1px 0;
@@ -99,6 +124,10 @@ i:hover{
 
 #section1{
     margin-bottom: 60px;
+}
+
+i{
+    cursor: pointer;
 }
 
 .carousel-item > div:nth-child(1){
@@ -175,23 +204,184 @@ i:hover{
     width: 100%;
 }
 
+#section3{
+    display: flex;
+    justify-content: space-between;
+}
+
 #fixed{
     position: sticky;
     top: 0px;
     height: 100vh;
+    padding-top: 30px;
     background-color: white;
     width: 26%;
 }
 
 #fixed > *{
-    margin-left: 10px;
+    margin-left: 15px;
+}
+
+#fixed > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+#fixed a{
+    text-decoration: none;
+    color: black;
+}
+
+#fixed a:hover{
+    color: #ee806b;
+}
+
+#fixed > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+#fixed > div:nth-child(2) > select{
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 12px 0;
 }
 
 #container{
     width: 70%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: -500px;
-    margin-left: 350px;
+    margin-top: 40px;
     gap: 10px;
 }
+
+#container img{
+    width: 100%;
+}
+
+#container button{
+    padding: 5px 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+}
+
+#container > div > span{
+    background-color: hsla(17, 47%, 3%, 0.5);
+    border-radius: 4px;
+    padding: 7px;
+    display: none;
+}
+
+#section4{
+    width: 96%;
+    display: flex;
+    margin:60px auto;
+    gap: 10px;
+}
+
+#section4 p{
+    font-size: 12px;
+}
+
+#section4 > div:nth-child(2){
+    margin-top: 25px;
+}
+
+#footerp1{
+    width: 90%;
+    display: flex;
+    margin:40px auto;
+    justify-content: space-between;
+}
+
+#footerp1 > div{
+    width: 48%;
+    border: 1px solid rgb(210, 209, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0; 
+}
+
+#footerp1 > div p{
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+#footerp1 > div a{
+    margin-left: 4px;
+    color: black;
+}
+
+#midfooter{
+    width: 90%;
+    display: flex;
+    margin:0 auto 30px auto;
+    gap: 20px;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+#midfooter > div{
+    width: 30%;
+}
+
+#midfooter > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+}
+
+#midfooter > div:nth-child(2) p{
+    margin: 0;
+}
+
+#midfooter > div:nth-child(2) p:hover, #midfooter > div:nth-child(3) p:hover{
+    text-decoration: underline;
+}
+
+#midfooter > div:nth-child(3) img{
+    width: 20px;
+}
+
+#midfooter span{
+    font-weight: bold;
+}
+
+#icons{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 28px;
+}
+
+#lowerFooter{
+    width: 90%;
+    margin: auto;
+    font-size: 13px;
+    line-height: 35px;
+}
+
+#lowerFooter a{
+    text-decoration: none;
+    color: black;
+}
+
+#lowerFooter a:hover{
+    text-decoration: underline;
+}
+
+#lowerFooter > div:nth-child(1){
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+}
+

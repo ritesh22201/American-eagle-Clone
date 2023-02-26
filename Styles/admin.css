@@ -1,14 +1,18 @@
 body{
     font-family: sans-serif;
-    background-image: linear-gradient(to left, #42275a, #734b6d);
+    background-image: linear-gradient(146.58deg, #f4f9fb 0%, #f1e3d5 21%, #f7c8b6 46%, #f2c898 71%, #eaeff2 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 115vh;
+    /* background-image: linear-gradient(to right,#fefefd, #fdfdfc); */
+    /* background: hsla(49, 25%, 86%, 0.5); */
 }
 
 #section1, #section2{
     width: 32%;
     margin: auto;
-    background-image: linear-gradient(to right, rgb(141, 250, 250), rgb(234, 212, 186));
+    background-image: linear-gradient(to right, rgb(230, 241, 251), rgb(218, 211, 202));
     padding: 40px 20px;
-    border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 50px;
 }
@@ -32,14 +36,18 @@ body{
 }
 
 #login > input:nth-child(3), #addProduct > input:nth-child(6){
-    background-color: black;
+    background-color: #f19380;
     color: white;
     cursor: pointer;
 }
 
+#login > input:nth-child(3):hover, #addProduct > input:nth-child(6):hover{
+    background-color: #d36049;
+}
+
 h1{
     font-size: 40px;
-    color:#734b6d;
+    color:rgb(81, 25, 89);
     text-shadow: 2px 2px #ff0000;
     text-align: center;
 }
@@ -55,7 +63,7 @@ h1{
     display: none;
     font-size: 40px;
     color: rgb(186, 247, 247);
-    background-color: hsla(187, 94%, 53%, 0.5);
+    background-color: hsla(20, 97%, 48%, 0.5);
     backdrop-filter: blur(5px);
     text-align: center;
     border-radius: 8px;

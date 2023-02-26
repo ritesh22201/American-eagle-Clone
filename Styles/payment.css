@@ -10,14 +10,32 @@
 html,body{
     width: 100%;
     height: 100%;
-    
-    
+       
+}
+.wid8{
+    width: 8%;
+}
+.wid25{
+    width: 10%;
+}
+.wid20{
+    width: 20%;
 }
 .wid100{
     width: 100%;
 }
+.wid30{
+    width:30% ;
+}
+
 .wid50{
     width: 50%;
+}
+.wid40{
+    width: 40%;
+}
+.pad25{
+    padding: 25px;
 }
 .mb25{
     margin-bottom: 25px;
@@ -25,14 +43,20 @@ html,body{
 .mright{
     margin-left: 5px;
 }
+.mrft20{
+    margin-left: 20px;
+}
+.mrtop{
+    margin-top: 12px;
+}
 .flex{
     display: flex;
     align-items: center;
 }
 .imglogo{
-    width: 100%;
+    width: 40%;
     height: 84px;
-    object-fit: contain;
+   
 }
 .imflag{
     width: 10%;
@@ -42,8 +66,20 @@ html,body{
     display: flex;
     flex-direction: row;
 }
+.justifycontent{
+    justify-content: space-between;
+}
 .height36{
     height: 36px;
+}
+.height42{
+    height: 42px;
+}
+.fntashcolor{
+    color: #666;
+}
+.cursorpointer{
+    cursor: pointer;
 }
 #header{
     width: 100%;
@@ -55,9 +91,64 @@ html,body{
     align-items: center;
     width: 100%;
     height: 100%;
+    border-bottom: 1px solid #d6d6d6;
+
+}
+.continueShopping{
+    width: 100%;
+    height: 100%;
+    color:rgb(25, 207, 25);
+    text-align: center;
+    font-size: 22px;
+    background-color: #c8c8c8;
+    opacity: 10px;
+    
+}
+.succesInnerDiv{
+    width: 70%;
+    margin: auto;
+}
+.anchortext{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+.anchortextEdit{
+    text-decoration: none;
+}
+.anchortext_Terms{
+    text-decoration: none;
+    color: #666;
+}
+.colorRed{
+    color: red;
+}
+#continueShoppingbtn{
+    background-color: #13f713;
+    width: 20%;
+    padding: 15px;
+    border-radius: 40px;
+    border-color: #b3eeb3;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
 }
 .logo_Section{
+    width: 80%;
+    justify-content: left;
     height: 100%;
+}
+.logoimg{
+    width: 60%;
+}
+.mainlogo{
+    margin-left: 20px;
+    width: 10%;
+    border: #d6d6d6;
+}
+.aerie{
+    margin-left: 20px;
+    width: 10%;
 }
 .flagAndCart_Section{
 
@@ -66,6 +157,12 @@ html,body{
 }
 .mar12{
     margin: 12px;
+}
+.displaynone{
+    display: none;
+}
+.textindent{
+    text-indent: 10px;
 }
 .main_Body{
     width: 100%;
@@ -79,11 +176,8 @@ html,body{
 }
 #mainBody_wrapper{
     width: 90%;
-    margin: auto;
-    
+    margin: auto;  
     box-sizing: border-box;
-   
-
 }
 #checkoutHeader>h1{
     margin: 40px 0 30px;
@@ -99,6 +193,11 @@ html,body{
     box-sizing: border-box;
     border-bottom: 1px solid #d6d6d6;
     
+}
+.addresstext{
+    font-size: .6875rem;
+    line-height: 16px;
+    color: #24272a;
 }
 .addressSaving{
     font-size: 12px;
@@ -157,8 +256,12 @@ html,body{
 }
 .itemdisplay{
    display: grid;
-   grid-template-columns: 16em auto;
+   /* grid-template-columns: repeat(1fr,1fr,1fr); */
+   grid-template-columns: 1fr 2fr;
    gap: 20px;
+   /*display: flex;
+   flex-direction: row;*/
+
    padding: 30px 0;
    box-sizing: border-box;
 }
@@ -230,6 +333,16 @@ html,body{
     color: #24272a;
     border-radius: 25px
 }
+.applyOfferbtn{
+    
+    height: 50px;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    background-color: #24272a;
+    color: white;
+    border-radius: 25px
+}
 .btndiv{
     margin-top: 10px;
 }
@@ -268,5 +381,164 @@ html,body{
     font-size: 14px;
     color: #666;
 
+}
+#shippingMethod{
+    margin-top: 40px;
+    width: 100%;
+
+}
+.sMHead{
+    font-size: 1rem;
+    line-height: 1.4375;
+    margin-top: 12px;
+}
+.arrivalDescription{
+    margin-top: 12px;
+    
+    
+}
+#methodOptionWrapper{
+    margin-top: 12px;
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
+}
+.arrivingDetails{
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    
+    margin-bottom: -1px;
+}
+.padleft{
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.bordernone{
+    background: none;
+    border: none;
+}
+.fontsmall{
+    font-size: 12px;
+}
+.font20px{
+    font-size: 20px;
+}
+.redeemGiftwrapper{
+    margin-top: 19px;
+}
+
+.redeembtn{
+    padding: 16px 24px 18px;
+    width: 100%;
+    border-color: #ccc;
+    /* text-align: left; */
+   
+    margin-bottom: 5px;
+    border-radius: 41px
+}
+.giftinp{
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid #d6d6d6;
+    text-indent: 8px;
+}
+.giftpin{
+    width: 30%;
+    margin-left: 12px;
+    border-radius: 5px;
+    border: 1px solid #d6d6d6;
+    text-indent: 8px;
+}
+.applybtndiv{
+    
+    margin-top: 19px
+}
+.applybtn{
+    padding: 16px 24px 18px;
+    width: 30%;
+    border-color: #555;
+    border-radius: 41px;
+    color: #fff;
+    background-color: #24272a;
+}
+#paymentCardDetails{
+    border:1px solid #d6d6d6; 
+    
+}
+
+#cardDetailsSection{
+    width: 90%;
+    margin: auto;
+   
+}
+#payemntOptiionsSection{
+    
+}
+
+.payMethods{
+    width: 80%;
+    margin: auto;
+    height: 60px;
+    align-items: center;
+    /* justify-content: space-between; */
+   
+
+}
+.payemnetOptioninnerDiv{
+    
+    
+    border: 1px solid #d6d6d6;
+}
+#placeOrder{
+    color: #fff;
+background: #385adc;
+border-color: #385adc;
+border-radius: 25px;
+height: 41px;
+}
+.footer{
+    width: 100%;
+}
+.footerinnerDiv{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.footerbtmfirstdiv{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+}
+.footerbtmsectdiv{
+    padding-top: 12px;
+    padding-bottom: 22px;
+    box-sizing: border-box;
+}
+#footerBottom{
+    width: 100%;
+}
+.btmdiv{
+    width: 80%;
+    margin: auto;
+
+}
+.termstext{
+    line-height: 16px;
+    font-size: 11px;
+    color: #666;
+}
+.justifycontenttextleft{
+    justify-content: flex-end;
+}
+.anchortext{
+    text-decoration: none;
+    line-height: 16px;
+    font-size: 11px;
+    font-weight: 500;
 }
 

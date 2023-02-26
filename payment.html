@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Sen:wght@400;700;800&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/82960e6fc3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/82960e6fc3.js" crossorigin="anonymous"></script>
     <title>Payment</title>
 </head>
 
@@ -19,26 +20,33 @@
     <header id="header">
         <div id="navHeader" class="navHeader">
             <div id="logo_Section" class="wid50 flex logo_Section">
-                <div class="wid50">
-                    <img src="./Media/logo/Pink Magenta White Modern Online Shop Logo.png" alt="" class="imglogo">
+                <div class="mainlogo">
+                    <a href="./index.html"> <img src="./Media/logo/icon.png" alt="" class="logoimg"></a>
+                    
                 </div>
-                <div class=" wid50">
+                <div class=" aerie">
 
-                    <img src="./Media/images/aerie (1).svg" alt="" class="">
+                    <img src="./Media/images/aerie (1).svg" alt="" class="logoimg">
                 </div>
             </div>
             <div id="flagAndCart_Section" class="wid50 flex flagAndCart_Section">
-                <div>   
-                    <img src="./Media/images/flag__IN.png" alt="" class="imflag mar12">
+                <div class="wid20">
+                    <img src="./Media/images/flag__IN.png" alt="" class="wid30 mar12">
                 </div>
-                <div>   
+                <div class="wid20">
                     <i class="fa-solid fa-bag-shopping mar12"></i>
                 </div>
-                
-                
+
+
             </div>
         </div>
-
+        <div id="succesHeader" class=" displaynone continueShopping wid8">
+            <div class="succesInnerDiv">   
+                <h3>Your Order Placed Successfully. Please Continue Shopping</h3>
+            <button id="continueShoppingbtn">Continue Shopping</button>
+            </div>
+            
+        </div>
     </header>
     <div id="main_Body" class="main_Body">
         <main id="mainBody_wrapper">
@@ -48,10 +56,10 @@
             <div id="shopping_DeatilsParent">
 
                 <div class="">
-                    <div class="shipInfoHead">
+                    <div class="shipInfoHead ">
                         <h3 id="">Shipping info</h3>
                     </div>
-                    <h3 class="addressSaving">
+                    <h3 class="addressSaving addresstext">
                         The address you enter will be saved. Manage your saved addresses in account settings.
                     </h3>
                     <!-- Shipping Address and Payment section-->
@@ -91,7 +99,8 @@
                                             placeholder="City" required>
                                     </div>
                                     <div class="wid50">
-                                        <select name="" id="" class="seclect inputsstyle ">
+                                        <select name="" id="state" class="seclect inputsstyle ">
+                                            <option value="Select State">Select State</option>
                                             <option value="Delhi">Delhi</option>
                                             <option value="Karnataka">Karnataka</option>
                                             <option value="Andhra">Andhra</option>
@@ -101,56 +110,316 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div>   
-                                    <input type="text" id="PostalCode" class=" mb25 zipcode height36 inputsstyle height36" placeholder="Zip Code2"
-                                    required>
+                                <div>
+                                    <input type="number" id="PostalCode"
+                                        class=" mb25 zipcode height36 inputsstyle height36" placeholder="Zip Code2"
+                                        required>
                                 </div>
-                                
+
                             </div>
                         </form>
                     </div>
-                    <div class="flexrow">   
+                    <div class="flexrow">
                         <input type="checkbox" name="" id="">
-                        <span><p>Save this shipping Address</p></span>
+                        <span class="padleft">
+                            <p>Save this shipping Address</p>
+                        </span>
                     </div>
-                    
+                    <!-- Shipping method section -->
+                    <div id="shippingMethod">
+                        <div id="shippingMethodWrapper" class="wid100">
+                            <div id="sMHead" class="sMHead">
+                                <h4>Shipping Method</h4>
+                            </div>
+                            <div class="arrivalDescription">
+                                <p class="termstext">Order by 1PM EST to receive by estimated dates below.</p>
+                            </div>
+                            <div id="methodOption" class="wid100">
+                                <div id="methodOptionWrapper" class="wid100 arrivalDescription">
+                                    <div>
+                                        <div class="arrivingDetails">
+                                            <div class="flex">
+                                                <input type="radio" name="arrivingday" id="">
+                                                <div class="padleft">
+                                                    <h4>Standard</h4>
+                                                    <p class="termstext">Arrives between <span id="startDate"></span>- <span id="toDate"></span></p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p>$7</p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div>
+                                        <div class="arrivingDetails">
+                                            <div class="flex">
+                                                <input type="radio" name="arrivingday" id="">
+                                                <div class="padleft">
+                                                    <h4>Two Day</h4>
+                                                    <p class="termstext">Arrives between <span id="twoDaystartDate"></span> -  <span id="twoDaytoDate"></span></p>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <p>$10</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div>
+
+                                        <div class="arrivingDetails">
+                                            <div class="flex">
+                                                <input type="radio" name="arrivingday" id="">
+                                                <div class="padleft">
+                                                    <h4>Overnight</h4>
+                                                    <p class="termstext">Arrives between <span id="overNight"></span></p>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <p>$20</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="sMHead"> Payment</h4>
+                        <p class="termstext ">
+                            The billing info you enter will be saved. Manage your saved payments in account settings.
+                        </p>
+                    </div>
+                    <div id="gitCardReedeem">
+                        <div id="redeemGift" class="wid100">
+                            <div id="redeemGiftwrapper redeemGiftwrapper">
+                                <div id="redeembtnParent" class=" wid100 redeemGiftwrapper">
+
+                                    <button id="redeemBtn" class="redeembtn">Redeem a Gift Card</button>
+                                </div>
+                                <div id="gitCardNumber"class="wid100 redeemGiftwrapper displaynone ">
+                                    <div class="wid100 flex">
+                                        <input type="text" name="" id="" placeholder="Gift Card Number"
+                                            class="giftinp height36">
+                                        <input type="number" name="" id="" placeholder="Pin" class="giftpin height36">
+                                    </div>
+                                    <div class="applybtndiv">
+                                        <button id="apply" class="applybtn">Apply</button>
+                                    </div>
+                                    <p class="fontsmall mrtop fntashcolor">You can apply up to 3 gift cards and account
+                                        credits.</p>
+                                </div>
+
+                            </div>
+                            <div id="paymentCardDetails" class="wid100 mrtop">
+                                <div id="cardDetailsSection">
+                                    <div id="cardDetails" class="wid100 mrtop">
+
+                                        <div class="mb25">
+                                            <div class="flexrow">
+                                                <input type="radio" class="">
+                                                <div class="mright">
+                                                    <i class="fa-regular fa-credit-card"></i>
+                                                </div>
+                                                <h4 class="mright">Credit or Debit Card</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb25">
+                                            <input type="tel" name="selectpayment" id="cardNumber"
+                                                class="wid100 inputsstyle height42 textindent"
+                                                placeholder="Card Number*" pattern="[0-9\s]{13,19}"  max="12">
+                                        </div>
+
+                                        <div class=" flexrow wid100 mb25 justifycontent">
+                                            <div class="wid40">
+                                                <input type="text" name="" id="expiryDate"
+                                                    class="inputsstyle height42 wid100 textindent"
+                                                    placeholder="Exp. (MM/YY)" required>
+                                            </div>
+
+                                            <div class="wid40 ">
+                                                <input type="number" name="" id="cvv"
+                                                    class="inputsstyle height42 wid100 textindent" placeholder="CVV"
+                                                    required maxlength="3">
+                                            </div>
+                                        </div>
+                                        <div class="wid100 mb25">
+                                            <input type="number" name="" id="phoneNumber"
+                                                class="wid100 inputsstyle height42 textindent"
+                                                placeholder="Phone Number" required>
+                                        </div>
+                                        <p class="fontsmall fntashcolor">In case there's a billing issue</p>
+                                    </div>
+                                    <div class="flexrow mrtop mb25">
+                                        <input type="checkbox" name="" id="">
+                                        <span class="padleft ">
+                                            <p class="fntashcolor">Save this shipping Address</p>
+                                        </span>
+                                    </div>
+
+                                    <div class="">
+                                        <div id="sMHead" class="sMHead">
+                                            <h4>Billing Address</h4>
+                                        </div>
+
+                                        <div class="flexrow mrtop mb25">
+                                            <input type="checkbox" name="" id="sameAddress">
+                                            <span class="padleft ">
+                                                <p class="fntashcolor">Same as shipping Address</p>
+                                            </span>
+                                        </div>
+
+                                        <div id="newAdderess" class="wid100">
+                                            <form action="" id="submitFormNew">
+                                                <div id="shippingDetails">
+
+                                                    <div class="wid100 nameinpdiv mb25">
+                                                        <div class="wid50">
+                                                            <input type="text" id="firstName"
+                                                                class=" nameinputsfirst inputsstyle height42"
+                                                                placeholder="First Name" required>
+                                                        </div>
+                                                        <div class=" wid50">
+                                                            <input type="text" id="lastName"
+                                                                class="nameinputsSec inputsstyle height42"
+                                                                placeholder="Last Name" required>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mb25 wid100">
+                                                        <input type="text" id="address"
+                                                            class="inputs inputsstyle height42"
+                                                            placeholder="Address Line 1" required>
+                                                    </div>
+                                                    <div class="mb25 wid100">
+                                                        <input type="text" id="address"
+                                                            class="inputs inputsstyle height42"
+                                                            placeholder="Address Line 2 (Optional)" required>
+                                                    </div>
+
+
+                                                    <div class="flexrow mb25 nameinpdiv">
+                                                        <div class="wid50">
+                                                            <input type="text" id="City"
+                                                                class=" nameinputsfirst inputsstyle height42"
+                                                                placeholder="City" required>
+                                                        </div>
+                                                        <div class="wid50">
+                                                            <input type="text" id="City"
+                                                                class=" nameinputsfirst inputsstyle height42"
+                                                                placeholder="State/Province/Region" required>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <input type="text" id="PostalCode"
+                                                            class=" mb25 zipcode height36 inputsstyle height42"
+                                                            placeholder="Postal Code" required>
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <!-- Paying options Section -->
+                                <div id="payemntOptiionsSection" class="">
+                                    <div class="">
+                                        <div class="payemnetOptioninnerDiv">
+                                            <div id="payemntOptioin" class="flexrow payMethods height42">
+                                                <div class="wid8">
+                                                    <input type="radio" name="selectpayment" class="height42">
+                                                </div>
+                                                <div class="wid25">
+                                                    <i class="fa-brands fa-paypal"></i>
+                                                </div>
+                                                <div>
+                                                    <h6>
+                                                        PayPal
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="payemnetOptioninnerDiv">
+                                            <div class="flexrow payMethods height42">
+                                                <div class="wid8 ">
+                                                    <input type="radio" name="selectpayment" class="height42">
+                                                </div>
+                                                <div class="wid25">
+                                                    <i class="fa-brands fa-google-pay"></i>
+                                                </div>
+                                                <div>
+                                                    <h5>Google Pay</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- real rewards credit card info -->
+                        <div class="mrtop">
+                            <div class="flexrow">
+                                <div>
+                                    <img src="./Media/images/rr_credit_lp_1_sm.jpeg" alt="" class="wid100">
+                                </div>
+                                <div>
+                                    <div>
+                                        <p class="termstext">Save <b>$7.88</b> (20%) & earn 2x points* on this purchase when you open &
+                                            use a Real Rewards credit card (you'll earn 2x on future purchase, too!).
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <a href="">Learn More</a>
+                                                <a href="">Apply Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="footerbtmfirstdiv" >   
+                            <button id="placeOrder"class="wid100 cursorpointer">Place Order</button>
+                        </div>
+                    </div>
+                    <div class="footerbtmfirstdiv">   
+                        <p class="termstext">By placing an order, you affirm that you have read, understood, and consent to the <a href="" class="">Privacy Notices</a>and <a href="" class="">Terms of Use</a></p>
+                    </div>
+
                 </div>
                 <!-- order summary section -->
                 <div id="orderSummarySection">
-                    <div id="bagItemsSection">   
-                        <div class="orderdetailshead">
-                            <div class="">
+                    <div id="bagItemsSection">
+                        <div class="orderdetailshead  ">
+                            <div class="font20px">
                                 <h5>Shopp ingBag</h5>
                             </div>
-                            <span> itenm</span>
+                            <span id="totalItems" class="fontsmall"> </span>
                         </div>
                         <div id="displayBagitems" class="">
 
-                            <div class="itemdisplay">   
-                                <div class="wid50">
-                                    <a href=""> 
-                                        <img src="./Media/logo/Pink Magenta White Modern Online Shop Logo.png" alt="" class="wid100">
-                                    </a>
-                                    
-                                </div>
-                                <div class="wi">   
-                                    <h3>Title</h3>
-                                    <h3>Price</h3>
-                                    <p>Style:12134-33</p>
-                                    <p>Color:Navy Blue</p>
-                                    <p>Size:23</p>
-                                    <p>Quantity:3</p>
-                                </div>
-                            </div>
-                                                        
-                            <div class="edit">   
-                                <span><a href="">Edit</a></span>
-                                <span>Remove</span>
-                            </div>
+                      <!-- Append items here      -->
                         </div>
                     </div>
 
-                    <div id="rewardssection">   
+                    <div id="rewardssection">
                         <div class="rewardsHead">
                             <div class="">
                                 <h5>Real Rewards</h5>
@@ -158,45 +427,66 @@
                         </div>
                         <div id="rewarsdsBody" class="rewarsdsBody">
 
-                            <div class="rewardspoints">   
-                                
-                                <div class="pointsDeatilswrapper">   
-                                    <div class="pointsDeatils">   
-                                        <div>   
+                            <div class="rewardspoints">
+
+                                <div class="pointsDeatilswrapper">
+                                    <div class="pointsDeatils">
+                                        <div>
                                             <span>0</span>
-                                            <span><p>points</p></span>
+                                            <span>
+                                                <p>points</p>
+                                            </span>
                                         </div>
-                                        <div>   
-                                            <h3 class="flex"><p>Real</p><p class="colorblue">Rewards</p></h3>
-                                            <p>username@gmail.com</p>
+                                        <div>
+                                            <h3 class="flex">
+                                                <p>Real</p>
+                                                <p class="colorblue">Rewards</p>
+                                            </h3>
+                                            <p id="userName">username@gmail.com</p>
                                             <p>Level1</p>
                                         </div>
                                         <div></div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
-                                                        
-                            <div class="pointsdeatilsfooterh">   
-                                <div class="pointsdetailsFooter"><p>This order is worth 510 points.*</p></div>
+
+                            <div class="pointsdeatilsfooterh">
+                                <div class="pointsdetailsFooter">
+                                    <p>This order is worth 510 points.*</p>
+                                </div>
                             </div>
-                            <div class="pointsdesc1">   
+                            <div class="pointsdesc1">
                                 <p>*Pay with a Real Rewards credit card and you'll earn 2x the points shown above.</p>
                             </div>
-                            <div class="pointsdesc1">   
+                            <div class="pointsdesc1">
                                 <p>Earned rewards will show up here.</p>
                             </div>
 
-                            <div class="rewardsHead">   
-                                <div class="promohead"><h5>Offers</h5></div>
-                                <div class="btndiv">   
-                                    <button class="promoBtn">Apply a Promo Code</button>
+                            <div class="rewardsHead">
+                                <div class="promohead">
+                                    <h5>Offers</h5>
+                                </div>
+                                <div id="promoVtnDiv" class="btndiv">
+                                    <button id="promoBtn"class="promoBtn cursorpointer">Apply a Promo Code</button>
+                                </div>
+                                <div>   
+                                    <div id="offerInpDiv"class="wid100 redeemGiftwrapper   displaynone">
+                                        <div class="wid100 flex justifycontent">
+                                            <input type="text" name="" id="" placeholder="Gift Card Number"
+                                                class="giftinp height36">
+                                            <div class="wid20">
+                                                <button id="applyOffer" class="applyOfferbtn wid100 cursorpointer">Apply</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="orderSummary">   
+                    <div id="orderSummary">
                         <div class="orderSummaryHeaddiv">
                             <div class="rewardsHead">
                                 <h5>OrderSummary</h5>
@@ -204,66 +494,86 @@
                         </div>
                         <div id="orderSummaryBody" class="">
 
-                            <div id ="orderSummaryWrapper"class=" colorash">   
+                            <div id="orderSummaryWrapper" class=" colorash">
                                 <div class="">
-                                    <div class="pointsDeatils ">   
-                                        <p>Merchandise:</p>
-                                        <p>51</p>
+                                    <div class="pointsDeatils ">
+                                        <p >Merchandise:</p>
+                                        <p id="merchandise">$51</p>
                                     </div>
-                                    <div class="pointsDeatils ">   
+                                    <div class="pointsDeatils ">
                                         <p>Shipping:</p>
-                                        <p>100</p>
-                                    </div>
-                                    <div>   
-                                        <p>Spend $35.61 more for FREE standard shipping.</p>
-                                       
-                                    </div>
-                                    <div>   
-                                        <div class="pointsDeatils ">
-                                            <p>Discounts:</p>
-                                            <p>-30</p>
-                                        </div>
-                                        <div class="pointsDeatils ">   
-                                            <p>Real Rewards Extra 23% Off Your Purchase </p>
-                                            <p>122</p>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="pointsDeatils ordersummarydiv">   
-                                        <p>Merchandise After Discount:</p>
-                                        <p>300</p>
-                                    </div>
-                                    <div class="pointsDeatils ordersummarydiv">   
-                                        <p>Tax:</p>
-                                        <p>0</p>
+                                        <p>$5</p>
                                     </div>
                                     
+                                    <div class="pointsDeatils ordersummarydiv">
+                                        <p>Tax:</p>
+                                        <p>$0</p>
+                                    </div>
+
                                 </div>
-                               
+
                             </div>
-                                                        
-                            <div class="">   
+
+                            <div class="">
                                 <div class="orderSummaryHeaddiv">
                                     <div class="pointsDeatils ">
-                                        <p class="ordertotal">Order Total :<p>
-                                        <p class="ordertotal ">500</p>
+                                        <p class="ordertotal">Order Total :
+                                        <p>
+                                        <p id="total" class="ordertotal ">$500</p>
                                     </div>
-                                    <p class="ordersummaryFootertext">Your credit card won't be charged until the entire order ships.</p>
-                                    <div class="footercheckbox">   
-                                        <input type="checkbox"> <p class="mright ">Include free gift receipt</p>
+                                    <p class="ordersummaryFootertext">Your credit card won't be charged until the entire
+                                        order ships.</p>
+                                    <div class="footercheckbox">
+                                        <input type="checkbox">
+                                        <p class="mright ">Include free gift receipt</p>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </main>
+        <footer class="footer">  
+            <div class="footerinnerDiv">   
+                
+                <div class="footerbtmfirstdiv">   
+                   <p class="termstext"> *Cardmember offers are subject to credit approval and a Real Rewards credit card must be used as the sole payment type. See <a href="">Real Rewards Terms & Conditions</a>for details</p>
+                </div>
+                <div class="footerbtmsectdiv">   
+                    <p class="termstext"><strong>20% Off</strong>: Take 20% off your first AE® or Aerie® purchase when you open and use your Real Rewards credit card.  No coupon required in store. Discount code for online will be provided upon credit approval. Discount applied prior to sales tax and shipping & handling. Cannot be combined with any other coupon or discount code. Not valid for 3rd party merchandise, previously purchased merchandise or gift cards. Valid in US (including PR) only. No cash value.</p>
+                </div>
+            </div>  
+            <div><hr></div>
+            <div id="footerBottom"> 
+                  
+               <div class="btmdiv footerbtmfirstdiv" >  
+                    <div class="flex justifycontent">   
+                        <div class=" flex  justifycontent wid50"> 
+                            <p class="termstext">Privacy Notices</p>
+                            <p class="termstext">Terms of Use</p>
+                            <p class="termstext">Help</p>
+                            <p class="termstext">Returns+Exchanges</p>
+                        </div>
+                        <div class=" flex wid50 justifycontenttextleft"> 
+                            <p class="termstext">Question? 1(888) 232-4535 or Email US</p>
+                        </div>
+                    </div>  
+                    <div class="footerbtmfirstdiv">   
+                        <p class="termstext">© 2023 AEO Management Co. All Rights Reserved</p>
 
+                    </div>
+                    <div class="">   
+                        <img src="./Media/images/Footer-logos.svg" alt="">
+                    </div>
+               </div> 
+            </div>
+        </footer>
     </div>
+    
 
 </body>
-
+<script src="./Scripts/payment.js"></script>
 </html>
