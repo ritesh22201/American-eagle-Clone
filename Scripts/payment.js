@@ -122,7 +122,7 @@ function getcard(id, image, title, price, quantity) {
 
     <div class="">
         <span><a href="./cart.html" class="anchortextEdit">Edit</a></span>
-        <button data-id=${id} class="mrft20 bordernone remove">Remove</button>
+        <button data-id=${id} class="mrft20 bordernone remove cursorpointer">Remove</button>
     </div>
     `;
 
@@ -232,3 +232,8 @@ placeOrder.addEventListener("click", () => {
   }
   
 });
+
+let continueShoppingBtn= document.getElementById("continueShoppingbtn")
+continueShoppingBtn.addEventListener("click",()=>{
+    window.location.href="product.html"
+})

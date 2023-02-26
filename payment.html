@@ -42,8 +42,8 @@
         </div>
         <div id="succesHeader" class=" displaynone continueShopping wid8">
             <div class="succesInnerDiv">   
-                <h3>Your Order Placed Success Fully .Please Coninue Shopping</h3>
-            <button id="continueShoppingbtn"><a href="./product.html" class="anchortext">Continue Shopping</a></button>
+                <h3>Your Order Placed Successfully. Please Continue Shopping</h3>
+            <button id="continueShoppingbtn">Continue Shopping</button>
             </div>
             
         </div>
@@ -139,7 +139,7 @@
                                     <div>
                                         <div class="arrivingDetails">
                                             <div class="flex">
-                                                <input type="radio" name="" id="">
+                                                <input type="radio" name="arrivingday" id="">
                                                 <div class="padleft">
                                                     <h4>Standard</h4>
                                                     <p class="termstext">Arrives between <span id="startDate"></span>- <span id="toDate"></span></p>
@@ -155,7 +155,7 @@
                                     <div>
                                         <div class="arrivingDetails">
                                             <div class="flex">
-                                                <input type="radio" name="" id="">
+                                                <input type="radio" name="arrivingday" id="">
                                                 <div class="padleft">
                                                     <h4>Two Day</h4>
                                                     <p class="termstext">Arrives between <span id="twoDaystartDate"></span> -  <span id="twoDaytoDate"></span></p>
@@ -172,7 +172,7 @@
 
                                         <div class="arrivingDetails">
                                             <div class="flex">
-                                                <input type="radio" name="" id="">
+                                                <input type="radio" name="arrivingday" id="">
                                                 <div class="padleft">
                                                     <h4>Overnight</h4>
                                                     <p class="termstext">Arrives between <span id="overNight"></span></p>
@@ -231,7 +231,7 @@
                                         </div>
 
                                         <div class="mb25">
-                                            <input type="tel" name="" id="cardNumber"
+                                            <input type="tel" name="selectpayment" id="cardNumber"
                                                 class="wid100 inputsstyle height42 textindent"
                                                 placeholder="Card Number*" pattern="[0-9\s]{13,19}"  max="12">
                                         </div>
@@ -336,7 +336,7 @@
                                         <div class="payemnetOptioninnerDiv">
                                             <div id="payemntOptioin" class="flexrow payMethods height42">
                                                 <div class="wid8">
-                                                    <input type="radio" class="height42">
+                                                    <input type="radio" name="selectpayment" class="height42">
                                                 </div>
                                                 <div class="wid25">
                                                     <i class="fa-brands fa-paypal"></i>
@@ -351,7 +351,7 @@
                                         <div class="payemnetOptioninnerDiv">
                                             <div class="flexrow payMethods height42">
                                                 <div class="wid8 ">
-                                                    <input type="radio" class="height42">
+                                                    <input type="radio" name="selectpayment" class="height42">
                                                 </div>
                                                 <div class="wid25">
                                                     <i class="fa-brands fa-google-pay"></i>
@@ -396,7 +396,7 @@
                         </div>
 
                         <div class="footerbtmfirstdiv" >   
-                            <button id="placeOrder"class="wid100">Place Order</button>
+                            <button id="placeOrder"class="wid100 cursorpointer">Place Order</button>
                         </div>
                     </div>
                     <div class="footerbtmfirstdiv">   
@@ -442,7 +442,7 @@
                                                 <p>Real</p>
                                                 <p class="colorblue">Rewards</p>
                                             </h3>
-                                            <p>username@gmail.com</p>
+                                            <p id="userName">username@gmail.com</p>
                                             <p>Level1</p>
                                         </div>
                                         <div></div>
@@ -468,7 +468,7 @@
                                     <h5>Offers</h5>
                                 </div>
                                 <div id="promoVtnDiv" class="btndiv">
-                                    <button id="promoBtn"class="promoBtn">Apply a Promo Code</button>
+                                    <button id="promoBtn"class="promoBtn cursorpointer">Apply a Promo Code</button>
                                 </div>
                                 <div>   
                                     <div id="offerInpDiv"class="wid100 redeemGiftwrapper   displaynone">
@@ -476,7 +476,7 @@
                                             <input type="text" name="" id="" placeholder="Gift Card Number"
                                                 class="giftinp height36">
                                             <div class="wid20">
-                                                <button id="applyOffer" class="applyOfferbtn wid100">Apply</button>
+                                                <button id="applyOffer" class="applyOfferbtn wid100 cursorpointer">Apply</button>
                                             </div>
                                         </div>
                                         
