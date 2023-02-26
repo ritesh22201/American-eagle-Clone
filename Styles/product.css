@@ -15,7 +15,7 @@
 
 #nav1 span {
     width: 40%;
-    margin: auto;
+    margin-left: 330px;
     color: white;
 }
 
@@ -99,7 +99,7 @@ i:hover{
     display: grid;
     place-items: center;
     position: absolute;
-    top: 105px;
+    top: 80px;
     right: 15px;
     opacity: 0.95;
     display: none;
@@ -226,7 +226,7 @@ i{
     display: flex;
     flex-direction: column;
     line-height: 35px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     color: black;
     margin-bottom: 20px;
