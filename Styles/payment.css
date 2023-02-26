@@ -78,6 +78,9 @@ html,body{
 .fntashcolor{
     color: #666;
 }
+.cursorpointer{
+    cursor: pointer;
+}
 #header{
     width: 100%;
     height: 85px;
@@ -108,7 +111,7 @@ html,body{
 .anchortext{
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 25px;
 }
 .anchortextEdit{
     text-decoration: none;
@@ -126,7 +129,9 @@ html,body{
     padding: 15px;
     border-radius: 40px;
     border-color: #b3eeb3;
-    font-size: 18px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
 }
 .logo_Section{
     width: 80%;
