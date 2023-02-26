@@ -26,7 +26,9 @@ function topOfferSlide() {
 let url = "https://63f6414b59c944921f708a51.mockapi.io/login/"
 let username = document.getElementById("username")
 let profile = document.getElementById("profile")
-profile.addEventListener("mouseover", async (e) => {
+
+profile.addEventListener("mouseenter", async (e) => {
+
   try {
     let req = await fetch(url)
     let res = await req.json()
@@ -37,6 +39,7 @@ profile.addEventListener("mouseover", async (e) => {
 })
 profile.addEventListener("mouseout", (e) => {
   username.innerText = ""
+
 })
 
 // ******************************************************
