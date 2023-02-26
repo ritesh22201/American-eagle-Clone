@@ -91,6 +91,25 @@ i:hover{
     color: #ef8874;
 }
 
+#cartdata{
+    width: 25px;
+    height: 25px;
+    background-color:#6b7aee;
+    color: white;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 105px;
+    right: 15px;
+    opacity: 0.95;
+    display: none;
+    border-radius: 50%;
+}
+
+button:active{
+    scale: 0.98;
+}
+
 .headline{
     margin: 20px 0;
     padding: 1px 0;
@@ -105,6 +124,10 @@ i:hover{
 
 #section1{
     margin-bottom: 60px;
+}
+
+i{
+    cursor: pointer;
 }
 
 .carousel-item > div:nth-child(1){
@@ -247,6 +270,13 @@ i:hover{
     background-color: black;
     color: white;
     border-radius: 7px;
+}
+
+#container > div > span{
+    background-color: hsla(17, 47%, 3%, 0.5);
+    border-radius: 4px;
+    padding: 7px;
+    display: none;
 }
 
 #section4{

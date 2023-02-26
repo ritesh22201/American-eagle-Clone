@@ -29,7 +29,7 @@ console.log(LSdata)
 
 
 var main = document.getElementById('append')
- document.querySelector("#total-items").innerText = LSdata.length;
+document.querySelector("#total-items").innerText = LSdata.length;
 appendata(LSdata);
 function appendata(data) {
 
@@ -68,6 +68,29 @@ function appendata(data) {
 
     hr = document.createElement("hr")
 
+
+
+    //  ********image append *****
+
+    // if (LSdata.length == 0) {
+    //   // let imgurl = "https://www.linkpicture.com/q/3516854.jpg"
+    //   // let imagecart = document.createElement("img")
+    //   // img.src = imgurl
+    //   // main.append(imagecart)
+    //   console.log("hello")
+    // }
+
+     // ***Remove Succesfully Text****
+     let removediv = document.createElement("div")
+
+     let removesuc = document.createElement("span")
+    
+ 
+     removediv.append(removesuc)
+ 
+ 
+     // ***Remove Succesfully Text****
+
     // .buttons
     let quantity = document.createElement("span");
     quantity.textContent = `Qty : ${ele.quantity}`;
@@ -89,8 +112,20 @@ function appendata(data) {
       LSdata = LSdata.filter((elem) => {
         return elem.id !== ele.id
       })
+      removesuc.style.display = "inline"
+      removesuc.textContent = "Removed Succesfully✅"
+      removesuc.style.marginTop ="8px"
+
+      setTimeout(() => {
+        removesuc.style.display = "none"
+      }, 2000);
+
       localStorage.setItem("key", JSON.stringify(LSdata))
-      appendata(LSdata);
+      setTimeout(() => {
+        appendata(LSdata)
+      }, 2200);
+
+      // appendata(LSdata);
     });
     Increment.addEventListener("click", () => {
       ele = ele.quantity++;
@@ -107,9 +142,24 @@ function appendata(data) {
 
     });
 
+    // // ***Remove Succesfully Text****
+    // let removediv = document.createElement("div")
+
+    // let removesuc = document.createElement("span")
+    // removesuc.textContent = "Removed Succesfully"
+    // removediv.style.marginTop ="8px"
+
+    // removediv.append(removesuc)
 
 
-    card.append(title, cateogry, price, desc, quantity, Increment, decrement, remove)
+    // // ***Remove Succesfully Text****
+
+    let buttondiv = document.createElement("div")
+    buttondiv.append(Increment, decrement, remove)
+
+
+
+    card.append(title, cateogry, price, desc, quantity, buttondiv,removediv)
     main222.append(imgbox, card)
     main.append(main222, hr)
     document.querySelector("#total-items").innerText = LSdata.length;
@@ -120,22 +170,39 @@ function appendata(data) {
   for (let i = 0; i < LSdata.length; i++) {
     sum += LSdata[i].price * LSdata[i].quantity
   }
-  total.textContent = sum
-  total2.innerText = sum
+  total.textContent = sum.toFixed(2)
+  total2.innerText = sum.toFixed(2)
 
   let couponbtn = document.getElementById("coupon-btn")
 
-  couponbtn.addEventListener("click",()=>{
+  couponbtn.addEventListener("click", () => {
     let couponinput = document.getElementById("coupon-input")
-  
-    if(couponinput.value =="MASAI30"){
-      let x = sum * 0.7 ;
-      total2.innerText = x
+
+    if (couponinput.value == "MASAI30") {
+      let x = sum * 0.7;
+      total2.innerText = x.toFixed(2)
     }
-  
+
+
+
   })
 
+  if (LSdata.length == 0) {
+    let imgurl = "https://www.linkpicture.com/q/3516854.jpg"
+    let imagecart = document.createElement("img")
+    imagecart.src = imgurl
+    imagecart.style.width = "50%"
+
+    main.append(imagecart)
+
+    console.log("hello")
+  }
+
+
+
+
 }
+
 
 
 
@@ -156,6 +223,6 @@ search.addEventListener("input", (e) => {
     return element.title.toLowerCase().includes(value) || element.category.toLowerCase().includes(value);
 
   })
-  
+
   appendata(newArr)
 })

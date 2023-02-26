@@ -1,3 +1,7 @@
+// ******************************************************
+
+// OfferSlider
+
 let slideIndex = 0;
 topOfferSlide();
 
@@ -18,6 +22,7 @@ function topOfferSlide() {
   setTimeout(topOfferSlide, 2000); // Change image every 2 seconds
 }
 
+
 let url = "https://63f6414b59c944921f708a51.mockapi.io/login/"
 let username = document.getElementById("username")
 let profile = document.getElementById("profile")
@@ -33,3 +38,27 @@ profile.addEventListener("mouseenter", async (e) => {
 profile.addEventListener("mouseout", (e) => {
   username.innerHTML = ""
 })
+
+// ******************************************************
+
+// SlideImage
+
+const productContainers = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width/2;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
+
+// ******************************************************
+
