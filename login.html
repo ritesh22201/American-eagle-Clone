@@ -39,13 +39,14 @@
             /* background: rgba(76, 175, 80, 0.3) */
             /* opacity: 0.5; */
             /* border: solid black; */
-            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
         }
 
         #welIa {
             text-align: left;
             margin-top: 0px;
-
+            color: #EE806B;
         }
 
         .fa-solid {
@@ -67,6 +68,7 @@
             font-size: large;
             border-color: grey;
             margin-top: 5px;
+            border-radius: 10px;
         }
 
         #submit {
@@ -77,6 +79,7 @@
             background-color: black;
             color: white;
             cursor: pointer;
+            border-radius: 10px;
         }
 
         #socLogin {
@@ -92,6 +95,7 @@
             font-size: x-large;
             padding: 8px;
             cursor: pointer;
+            border-radius: 5px;
         }
 
         #google {
@@ -131,7 +135,7 @@
             background-color: rgb(229, 220, 220);
         }
 
-        .aename>img {
+        .aename img {
             /* font-size: x-large; */
             cursor: pointer;
             width: 55px;
@@ -139,9 +143,10 @@
         }
 
         body {
-            width: 100%;
+            width: auto;
             background-image: url(/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg);
-            background-size: cover;
+            background-size: auto;
+            background-position: center;
         }
 
         #invalidnum {
@@ -239,19 +244,137 @@
             display: flex;
             justify-content: space-between;
         }
+
+        .topOfferSlide {
+            display: flex;
+            margin: auto;
+            background-color: #EE806B;
+            padding-top: 20px;
+            position: sticky;
+            z-index: 1;
+        }
+
+        .mySlides {
+            display: flex;
+            margin: auto;
+            background-color: #EE806B;
+            float: left;
+        }
+
+        .a {
+            text-decoration: none;
+            font-size: 11px;
+        }
+
+        .mySlides a {
+            /* font-weight: bolder; */
+            /* text-decoration: none; */
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0.6px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding-left: 7px;
+        }
+
+        .mySlides p {
+            margin-top: 0px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0.6px;
+            color: white;
+        }
+
+        .dotSlide {
+            text-align: center;
+            padding-bottom: 10px;
+            height: 20px;
+            background-color: #EE806B;
+        }
+
+        .dot {
+            height: 4px;
+            width: 4px;
+            margin: 0 1px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        @media only screen and (max-width: 750px) {
+            .aename {
+                width: 100%;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(229, 220, 220);
+            }
+
+            .modal-dialog {
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 350px;
+                height: auto;
+                padding-top: 5px;
+                padding: 20px;
+                border-radius: 3px;
+                background-image: url("/WhatsApp\ Image\ 2023-02-22\ at\ 13.56.37.jpeg");
+                background-size: contain;
+                background-position: center;
+                margin-top: 50px;
+                /* background: rgba(76, 175, 80, 0.3) */
+                /* opacity: 0.5; */
+                /* border: solid black; */
+                /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            }
+        }
     </style>
 
 </head>
 
 <body>
-    <nav id="navbar">
-        <marquee behavior="" direction="">25% off jeans & cargos!</marquee>
-        <marquee behavior="" direction="">Free shipping on orders $75+ for Real Rewards members, plus so many more
-            perks!</marquee>
-    </nav>
-    <section class="aename">
-        <img src="/icon.png" alt="" id="icon"><img src="/aerie.svg" alt="">
+    <div class="topOfferSlide">
+        <div class="mySlides">
+            <a class="a" href="/product.html">25% off ALL new arrivals!</a>
+            <a href="/product.html">Shop Women</a>
+            <a href="/product.html">Shop Men</a>
+            <a href="/product.html">Shop Aerie</a>
+            <a href="/product.html">Details</a>
+        </div>
+        <div class="mySlides">
+            <a class="a" href="/product.html">25-40% off jeans & cargos!</a>
+            <a href="/product.html">Shop Women’s Jeans</a>
+            <a href="/product.html">Shop Men’s Jeans</a>
+            <a href="/product.html">Shop Women's Cargos</a>
+            <a href="/product.html">Details</a>
+        </div>
+        <div class="mySlides">
+            <a class="a" href="/product.html">Free shipping on orders over $100!</a>
+            <a href="/product.html">Details</a>
+        </div>
+    </div>
+    <div class="dotSlide">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
 
+    <section class="aename">
+        <a href="/index.html">
+            <img src="/icon.png" alt="" id="icon1">
+        </a>
+        <a href="/index.html">
+            <img src="/aerie.svg" alt="" id="icon2">
+        </a>
     </section>
     <section class="modal-dialog">
 
@@ -389,7 +512,7 @@
             let res = await req.json()
             for (let i = 0; i < res.length; i++) {
                 if (res[i].Mobile == entMobile.Mobile) {
-                    window.location.href = "/alreadyMember.html"
+                    window.location.href = "/OTPverification.html"
                     return
                 }
             }
@@ -401,7 +524,7 @@
                 }
             })
             console.log(request)
-            window.location.href = "/ifNotMember.html"
+            window.location.href = "/createNewAccount.html"
         } catch (error) {
             console.log(error)
         }
@@ -410,6 +533,25 @@
     closebtn.addEventListener("click", (e) => {
         window.location.href = "/"
     })
+    let slideIndex = 0;
+    topOfferSlide();
+
+    function topOfferSlide() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(topOfferSlide, 2000); // Change image every 2 seconds
+    }
 </script>
 
 </html>

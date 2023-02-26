@@ -162,7 +162,10 @@
     background-color: transparent ;
     align-items: center;
 }
-
+#username {
+    text-decoration: none;
+    color: #182C52;
+}
 
 /* ***************************************************** */
 
