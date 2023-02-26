@@ -126,6 +126,11 @@
     /* padding-top: 10px; */
 }
 
+#admin_btn{
+    margin-left: 10px;
+    font-size: 35px;
+}
+
 #titlem{
     padding: 13.5px 7px 13.5px 7px;
     margin: 0px 0px 0px 60px;
